@@ -1387,6 +1387,19 @@ body {
 input::placeholder {
   color: var(--font-color);
 }
+#web_bg {
+  position: fixed;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  background: url(http://s.shuaifan.tk/images/3.jpg);
+  background-attachment: local;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 h1,
 h2,
 h3,
@@ -3137,7 +3150,8 @@ h1.page-title + .tag-cloud-list {
 }
 #footer {
   position: relative;
-  background: #49b1f5;
+}
+# background: $light-blue {
   background-attachment: scroll;
   background-position: bottom;
   -webkit-background-size: cover;
@@ -3168,121 +3182,114 @@ h1.page-title + .tag-cloud-list {
 #page-header {
   position: relative;
   width: 100%;
-  background-color: #49b1f5;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
 }
-#page-header:not(.not-top-img):before {
+background-position: center center,
+background-size: cover,
+background-repeat: no-repeat,
+transition: all .5s,
+:not(.not-top-img):before {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.3);
   content: '';
 }
-#page-header.full_page {
+.full_page {
   height: 100vh;
   background-attachment: fixed;
 }
-#page-header.full_page #site-info {
+.full_page #site-info {
   position: absolute;
   top: 43%;
   padding: 0 10px;
   width: 100%;
 }
-#page-header #site-title,
-#page-header #site-subtitle,
-#page-header #scroll-down .scroll-down-effects {
+#site-title,
+#site-subtitle,
+#scroll-down .scroll-down-effects {
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
   line-height: 1.5;
 }
-#page-header #site-title {
+#site-title {
   margin: 0;
   color: var(--white);
   font-size: 1.85em;
 }
 @media screen and (min-width: 768px) {
-  #page-header #site-title {
+  #site-title {
     font-size: 2.85em;
   }
 }
-#page-header #site-subtitle {
+#site-subtitle {
   color: var(--light-grey);
   font-size: 1.15em;
 }
 @media screen and (min-width: 768px) {
-  #page-header #site-subtitle {
+  #site-subtitle {
     font-size: 1.72em;
   }
 }
-#page-header #site_social_icons {
+#site_social_icons {
   display: none;
   margin: 0 auto;
   width: 300px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
-  #page-header #site_social_icons {
+  #site_social_icons {
     display: block;
   }
 }
-#page-header #site_social_icons .social-icon {
+#site_social_icons .social-icon {
   margin: 0 10px;
   color: var(--light-grey);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
   font-size: 1.43em;
 }
-#page-header #scroll-down {
+#scroll-down {
   position: absolute;
   bottom: 0;
   width: 100%;
   cursor: pointer;
 }
-#page-header #scroll-down .scroll-down-effects {
+#scroll-down .scroll-down-effects {
   position: relative;
   width: 100%;
   color: var(--light-grey);
   font-size: 30px;
 }
-#page-header.not-home-page {
+.not-home-page {
   height: 400px;
 }
 @media screen and (max-width: 768px) {
-  #page-header.not-home-page {
+  .not-home-page {
     height: 280px;
   }
 }
-#page-header #page-site-info {
+#page-site-info {
   position: absolute;
   top: 200px;
   padding: 0 10px;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  #page-header #page-site-info {
+  #page-site-info {
     top: 140px;
   }
 }
-#page-header.post-bg {
+.post-bg {
   height: 400px;
 }
 @media screen and (max-width: 768px) {
-  #page-header.post-bg {
+  .post-bg {
     height: 360px;
   }
 }
-#page-header.post-bg:before {
+.post-bg:before {
   background-color: rgba(0,0,0,0.5);
 }
-#page-header #post-info {
+#post-info {
   position: absolute;
   bottom: 100px;
   padding: 0 8%;
@@ -3290,32 +3297,32 @@ h1.page-title + .tag-cloud-list {
   text-align: center;
 }
 @media screen and (max-width: 900px) {
-  #page-header #post-info {
+  #post-info {
     bottom: 30px;
     text-align: left;
   }
 }
 @media screen and (max-width: 768px) {
-  #page-header #post-info {
+  #post-info {
     bottom: 22px;
     padding: 0 22px;
   }
 }
-#page-header.not-top-img {
+.not-top-img {
   margin-bottom: 10px;
   height: 60px;
   background: 0;
 }
-#page-header.not-top-img #nav {
+.not-top-img #nav {
   background: rgba(255,255,255,0.8);
   -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
 }
-#page-header.not-top-img #nav a {
+.not-top-img #nav a {
   color: var(--font-color);
   text-shadow: none;
 }
-#page-header.nav-fixed #nav {
+.nav-fixed #nav {
   position: fixed;
   top: -60px;
   z-index: 91;
@@ -3328,18 +3335,18 @@ h1.page-title + .tag-cloud-list {
   -ms-transition: -ms-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
-#page-header.nav-fixed #nav a,
-#page-header.nav-fixed #nav #site-name,
-#page-header.nav-fixed #nav #toggle-menu {
+.nav-fixed #nav a,
+.nav-fixed #nav #site-name,
+.nav-fixed #nav #toggle-menu {
   color: var(--font-color);
   text-shadow: none;
 }
-#page-header.nav-fixed #nav a:hover,
-#page-header.nav-fixed #nav #site-name:hover,
-#page-header.nav-fixed #nav #toggle-menu:hover {
+.nav-fixed #nav a:hover,
+.nav-fixed #nav #site-name:hover,
+.nav-fixed #nav #toggle-menu:hover {
   color: #49b1f5;
 }
-#page-header.nav-visible #nav {
+.nav-visible #nav {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -3351,7 +3358,7 @@ h1.page-title + .tag-cloud-list {
   -ms-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
 }
-#page-header.nav-visible + .layout > .aside-content > .sticky_layout {
+.nav-visible + .layout > .aside-content > .sticky_layout {
   top: 70px;
   -webkit-transition: top 0.5s;
   -moz-transition: top 0.5s;
