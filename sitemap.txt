@@ -1,2 +1,2 @@
-https://github.com/shuaifanfan/shuaifanfan.github.io.git/2022/05/16/hello-world/
-https://github.com/shuaifanfan/shuaifanfan.github.io.git
+http://example.com/2022/05/16/hello-world/
+http://example.com/

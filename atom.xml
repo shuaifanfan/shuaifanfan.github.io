@@ -3,11 +3,11 @@
   <title>joe</title>
   
   
-  <link href="https://github.com/shuaifanfan/shuaifanfan.github.io.git/atom.xml" rel="self"/>
+  <link href="http://example.com/atom.xml" rel="self"/>
   
-  <link href="https://github.com/shuaifanfan/shuaifanfan.github.io.git/"/>
+  <link href="http://example.com/"/>
   <updated>2022-05-16T14:19:31.554Z</updated>
-  <id>https://github.com/shuaifanfan/shuaifanfan.github.io.git/</id>
+  <id>http://example.com/</id>
   
   <author>
     <name>joe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/shuaifanfan/shuaifanfan.github.io.git/2022/05/16/hello-world/"/>
-    <id>https://github.com/shuaifanfan/shuaifanfan.github.io.git/2022/05/16/hello-world/</id>
+    <link href="http://example.com/2022/05/16/hello-world/"/>
+    <id>http://example.com/2022/05/16/hello-world/</id>
     <published>2022-05-16T14:19:31.554Z</published>
     <updated>2022-05-16T14:19:31.554Z</updated>
     
