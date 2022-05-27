@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-05-27T06:27:54.211Z</updated>
+  <updated>2022-05-27T14:31:55.984Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ali-drive挂载</title>
+    <link href="http://example.com/2022/05/27/a-drive%E6%8C%82%E8%BD%BD/"/>
+    <id>http://example.com/2022/05/27/a-drive%E6%8C%82%E8%BD%BD/</id>
+    <published>2022-05-27T14:06:43.000Z</published>
+    <updated>2022-05-27T14:31:55.984Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="针对pc本地存储不够用，把阿里云盘挂载到系统上扩容"><a href="#针对pc本地存储不够用，把阿里云盘挂载到系统上扩容" class="headerlink" title="针对pc本地存储不够用，把阿里云盘挂载到系统上扩容"></a>针对pc本地存储不够用，把阿里云盘挂载到系统上扩容</h1><p>学生优惠：本科四年1个T</p><h1 id="避雷"><a href="#避雷" class="headerlink" title="避雷"></a>避雷</h1><ul><li>目前搜索引擎上看到最多的是cloud drive的不开源软件支持阿里云盘挂载，版本是1.1，但是bug极多，误碰</li></ul><h1 id="挂载步骤"><a href="#挂载步骤" class="headerlink" title="挂载步骤"></a>挂载步骤</h1><ul><li><a href="https://www.bilibili.com/read/cv16275095/">参考链接</a></li></ul><p>重点在github上的项目：<a href="https://github.com/RaiDrive/RaiDrive.Translation">RaiDrive挂载软件</a>，在这里总结一下</p><ol><li><p>下载java，后续的bat里面含java的语句(8和18挑一个版本)</p></li><li><p>修改webdav.bat源文件里的内容：<strong>该文件在哪个盘</strong>  <strong>cd到该文件的地址</strong> <strong>端口</strong> <strong>阿里云盘网页端的token</strong></p></li><li><p>运行该文件并打开 <a href="http://127.0.0.1/">http://127.0.0.1</a>: 端口（账号密码都是admin）</p></li><li><p>设置该bat文件的开机自启</p></li><li><p>安装RaiDrivre并添加你的云盘</p><h1 id="所需文件"><a href="#所需文件" class="headerlink" title="所需文件"></a>所需文件</h1><p>阿里云盘：<a href="https://www.aliyundrive.com/s/j3KuEEoYB1u">https://www.aliyundrive.com/s/j3KuEEoYB1u</a></p><p>提取码：t6i3</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;针对pc本地存储不够用，把阿里云盘挂载到系统上扩容&quot;&gt;&lt;a href=&quot;#针对pc本地存储不够用，把阿里云盘挂载到系统上扩容&quot; class=&quot;headerlink&quot; title=&quot;针对pc本地存储不够用，把阿里云盘挂载到系统上扩容&quot;&gt;&lt;/a&gt;针对pc本地存储不够用</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>隔离生活第二天</title>
