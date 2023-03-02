@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-05-27T14:31:55.984Z</updated>
+  <updated>2023-03-02T14:38:25.520Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/05/27/a-drive%E6%8C%82%E8%BD%BD/"/>
     <id>http://example.com/2022/05/27/a-drive%E6%8C%82%E8%BD%BD/</id>
     <published>2022-05-27T14:06:43.000Z</published>
-    <updated>2022-05-27T14:31:55.984Z</updated>
+    <updated>2023-03-02T14:38:25.520Z</updated>
     
     <content type="html"><![CDATA[<h1 id="针对pc本地存储不够用，把阿里云盘挂载到系统上扩容"><a href="#针对pc本地存储不够用，把阿里云盘挂载到系统上扩容" class="headerlink" title="针对pc本地存储不够用，把阿里云盘挂载到系统上扩容"></a>针对pc本地存储不够用，把阿里云盘挂载到系统上扩容</h1><p>学生优惠：本科四年1个T</p><h1 id="避雷"><a href="#避雷" class="headerlink" title="避雷"></a>避雷</h1><ul><li>目前搜索引擎上看到最多的是cloud drive的不开源软件支持阿里云盘挂载，版本是1.1，但是bug极多，误碰</li></ul><h1 id="挂载步骤"><a href="#挂载步骤" class="headerlink" title="挂载步骤"></a>挂载步骤</h1><ul><li><a href="https://www.bilibili.com/read/cv16275095/">参考链接</a></li></ul><p>重点在github上的项目：<a href="https://github.com/RaiDrive/RaiDrive.Translation">RaiDrive挂载软件</a>，在这里总结一下</p><ol><li><p>下载java，后续的bat里面含java的语句(8和18挑一个版本)</p></li><li><p>修改webdav.bat源文件里的内容：<strong>该文件在哪个盘</strong>  <strong>cd到该文件的地址</strong> <strong>端口</strong> <strong>阿里云盘网页端的token</strong></p></li><li><p>运行该文件并打开 <a href="http://127.0.0.1/">http://127.0.0.1</a>: 端口（账号密码都是admin）</p></li><li><p>设置该bat文件的开机自启</p></li><li><p>安装RaiDrivre并添加你的云盘</p><h1 id="所需文件"><a href="#所需文件" class="headerlink" title="所需文件"></a>所需文件</h1><p>阿里云盘：<a href="https://www.aliyundrive.com/s/j3KuEEoYB1u">https://www.aliyundrive.com/s/j3KuEEoYB1u</a></p><p>提取码：t6i3</p></li></ol>]]></content>
     
@@ -34,6 +34,8 @@
     
     
     
+    <category term="网盘" scheme="http://example.com/tags/%E7%BD%91%E7%9B%98/"/>
+    
   </entry>
   
   <entry>
@@ -41,7 +43,7 @@
     <link href="http://example.com/2022/05/20/first/"/>
     <id>http://example.com/2022/05/20/first/</id>
     <published>2022-05-20T05:53:42.000Z</published>
-    <updated>2022-08-12T12:24:11.516Z</updated>
+    <updated>2023-03-02T14:38:23.033Z</updated>
     
     <content type="html"><![CDATA[<h1 id="感谢super杰"><a href="#感谢super杰" class="headerlink" title="感谢super杰"></a>感谢super杰</h1><p>这几天跑前跑后取饭取核酸拭子</p><h1 id="鸣谢马宝"><a href="#鸣谢马宝" class="headerlink" title="鸣谢马宝"></a>鸣谢马宝</h1><p>有建站需求的宝，可以去看<a href="https://blog.1314171.xyz/">马宝的文档</a></p><h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><p>建blog就是想用文字留下一些痕迹，记录一下自己的所学所思<br>希望大家都有能坚持做的事</p>]]></content>
     
@@ -54,6 +56,10 @@
     
     
     
+    <category term="extra" scheme="http://example.com/categories/extra/"/>
+    
+    
+    <category term="epidemic" scheme="http://example.com/tags/epidemic/"/>
     
   </entry>
   
