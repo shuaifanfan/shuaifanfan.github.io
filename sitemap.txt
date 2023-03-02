@@ -1,3 +1,4 @@
+http://example.com/2023/03/02/Linux%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/
 http://example.com/works/Linux%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95.html
 http://example.com/2022/05/27/a-drive%E6%8C%82%E8%BD%BD/
 http://example.com/2022/05/20/first/
@@ -9,4 +10,6 @@ http://example.com/2022/05/16/hello-world/
 http://example.com/
 http://example.com/tags/%E7%BD%91%E7%9B%98/
 http://example.com/tags/epidemic/
+http://example.com/tags/linux/
 http://example.com/categories/extra/
+http://example.com/categories/tech/
