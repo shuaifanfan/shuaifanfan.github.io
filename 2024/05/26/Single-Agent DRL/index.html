@@ -1,0 +1,377 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Single-Agent DRL | joe</title><meta name="keywords" content="DRL"><meta name="author" content="joe"><meta name="copyright" content="joe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="马尔可夫奖励过程（有解析解的价值函数V）、马尔可夫决策过程（有动作）（离散+有模型）(预测和控制)。  预测问题，可将mk决策过程转化为mk奖励过程，求出解析解&#x2F;数值迭代。控制过程，有策略迭代和价值迭代两种，本质上都是显示求价值，隐式学策略，因此，都是基于价值的解法。  策略迭代的价值函数V是单调递增，可数学证明。价值迭代基于动态规划，最终可收敛到正确值，可理论论证。  免模型（p(s’|a,s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Single-Agent DRL">
+<meta property="og:url" content="http://example.com/2024/05/26/Single-Agent%20DRL/index.html">
+<meta property="og:site_name" content="joe">
+<meta property="og:description" content="马尔可夫奖励过程（有解析解的价值函数V）、马尔可夫决策过程（有动作）（离散+有模型）(预测和控制)。  预测问题，可将mk决策过程转化为mk奖励过程，求出解析解&#x2F;数值迭代。控制过程，有策略迭代和价值迭代两种，本质上都是显示求价值，隐式学策略，因此，都是基于价值的解法。  策略迭代的价值函数V是单调递增，可数学证明。价值迭代基于动态规划，最终可收敛到正确值，可理论论证。  免模型（p(s’|a,s">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/orange">
+<meta property="article:published_time" content="2024-05-26T13:54:44.000Z">
+<meta property="article:modified_time" content="2025-05-26T17:27:22.633Z">
+<meta property="article:author" content="joe">
+<meta property="article:tag" content="DRL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/orange"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/05/26/Single-Agent%20DRL/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Single-Agent DRL',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2025-05-27 01:27:22'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="joe" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/93373861.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">joe</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Single-Agent DRL</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">Created</span><time datetime="2024-05-26T13:54:44.000Z" title="Created 2024-05-26 21:54:44">2024-05-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/DRL/">DRL</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">3.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>12min</span></span></div></div></div><article class="post-content" id="article-container"><ul>
+<li><p>马尔可夫奖励过程（有解析解的价值函数V）、马尔可夫决策过程（有动作）（离散+有模型）(预测和控制)。</p>
+</li>
+<li><p>预测问题，可将mk决策过程转化为mk奖励过程，求出解析解/数值迭代。控制过程，有策略迭代和价值迭代两种，本质上都是显示求价值，隐式学策略，因此，都是基于价值的解法。</p>
+</li>
+<li><p>策略迭代的价值函数V是单调递增，可数学证明。价值迭代基于动态规划，最终可收敛到正确值，可理论论证。</p>
+</li>
+<li><p>免模型（p(s’|a,s)未知，r(a,s)未知，需要大量与环境交互，采样来近似），不是mk决策过程。</p>
+</li>
+<li><p>免模型的预测/策略评估方法：蒙特卡洛，时序差分，n步时序差分。有模型是动态规划+线性代数求解析解。免模型评估的思路是：通过大量采样，来逼近有模型的价值函数迭代公式。</p>
+</li>
+<li><p>免模型的控制：sarsa和q-learning。sarsa是通过大量采样，来逼近Q函数的依照概率的迭代公式（贝尔曼方程），大数定律决定可以大量采样逼近期望（贝尔曼期望方程）。时序差分评估+ε贪心决策控制。区别在于异同策略（更新Q的公式不同，max可看成用最优贝尔曼方程更新，q-learning不需要采样逼近期望）。可数学公式证明，使用ε-贪心决策，Q价值函数在迭代中单增。</p>
+</li>
+<li><p>表格型方法:有模型的离散的mk决策过程、免模型控制。只要是离散的，要填Q表格，基于价值的算法，都是表格型方法。</p>
+</li>
+<li><p>策略梯度：通过大量采样，逼近回报的期望，梯度上升最大化期望。可以把乘积运算，转化成对数求和，用交叉熵作为损失函数。添加基线是因为怕采样不够，使用恰当的奖励系数（优势函数），也是怕采样不充分。蒙特卡罗策略梯度是最基础的策略梯度，它逆序求Gt。（REINFORCE）</p>
+</li>
+<li><p>策略梯度从回报的均值出发，推导公式。因为大量采样逼近均值的假设条件难以达到，做出添加基线+恰当奖励系数的修正。最终从损失函数的梯度公式反推出<strong>对数求和形式的损失函数</strong>。损失函数前的Gt（优势函数），可以看成对每一个采样到的（s，a）状态动作对的对数概率值梯度前的加权系数，奖励为正则增大概率，奖励越大梯度越大。奖励为负，则梯度为负。</p>
+</li>
+<li><p>PPO：同策略的策略梯度，通过重要性采样，一边大量采样，一边学习。通过梯度公式，可以反推出<strong>重要性采样之后的损失函数</strong>。ppo两个策略：惩罚和裁剪，都是防止两个策略网络输出的动作分布差距过大，导致方差过大，进而导致采样不充分会导致的严重不稳定后果。实际上，PPO和蒙特卡洛策略梯度，都不是对一个轨迹做优化，而是对一个状态动作对，计算期望回报并做梯度更新。</p>
+</li>
+<li><p>PPO：损失函数（优化目标）是随机变量R（回报/优势函数）的均值，最后是大量采样离散化近似。在公式推导中，要格外注意 随机变量取均值，随机变量取均值离散化近似，随机变量取均值和求导换序。</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+\frac{1}{N} \sum_{n=1}^{N} \sum_{t=1}^{T_{n}} \underline{R\left(\tau^{n}\right)} \log p_{\theta}\left(a_{t}^{n} \mid s_{t}^{n}\right) \longleftrightarrow \frac{1}{N} \sum_{n=1}^{N} \sum_{t=1}^{T_{n}} \underline{R\left(\tau^{n}\right)} \nabla \log p_{\theta}\left(a_{t}^{n} \mid s_{t}^{n}\right)</script><ul>
+<li><p>如上左是mc策略梯度的优化目标，右是求梯度结果。 它的意图很明显，那个动作后续的总汇报大，就加大那个动作概率。<br>下式数值约等，但不全等。因为$\left[R(\tau)  \log p_{\theta}(\tau)\right]$ 是一个由参数θ决定的分布，而他的均值则是θ的函数。在采样求均值的过程中，在数值上近似，但是这个关于θ的函数发生了变化，只是当前θ的取值，使得二者数值上是近似的。因此，对θ取梯度时，肯定是不等的。也正是这个采样导致了约等号的出现，也导致了只能采样一次更新一次。不然θ值改变之后，二者在数值上就不是近似的，就不能拿来更新梯度。</p>
+<script type="math/tex; mode=display">
+\frac{1}{N} \sum_{n=1}^{N} \sum_{t=1}^{T_{n}} R\left(\tau^{n}\right)  \log p_{\theta}\left(a_{t}^{n} \mid s_{t}^{n}\right) \\
+= \frac{1}{N} \sum_{n=1}^{N} R\left(\tau^{n}\right)  \log p_{\theta}\left(\tau^{n}\right) \\
+\approx  \mathbb{E}_{\tau \sim p_{\theta}(\tau)}\left[R(\tau)  \log p_{\theta}(\tau)\right]</script></li>
+<li><p>实际上，损失函数$\frac{1} {N} \sum_{n=1}^{N} \sum_{t=1}^{T_{n} } \underline{R\left(\tau^{n}\right)} log p_{\theta}\left(a_{t}^{n} \mid s_{t}^{n}\right)$既不是R的均值，也是 $\left[R(\tau)  \log p_{\theta}(\tau)\right]$的均值（如下式所示），他只是R的均值通过采样的近似。这里的损失函数求出梯度，只是采样得到的用来近似期望回报的方式，因为并不能实际求出期望回报然后求梯度。</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+ \begin{array}{l}
+ \nabla \mathbb{E}_{\tau \sim p_{\theta}(\tau)}\left[R(\tau)  \log p_{\theta}(\tau)\right] \\
+ = \nabla \sum_{\tau} \underline{R\left(\tau\right)}p_\theta(\tau)  \log p_{\theta}\left(\tau\right)\\
+ = \sum_{\tau} \underline{R\left(\tau\right)}p_\theta(\tau) \nabla \log p_{\theta}\left(\tau\right)+ \sum_{\tau} \underline{R\left(\tau\right)}\nabla p_\theta(\tau)  \log p_{\theta}\left(\tau\right)\\
+=\mathbb{E}_{\tau \sim p_{\theta}(\tau)}\left[R(\tau)  \log \nabla p_{\theta}(\tau)\right] +\sum_{\tau} \underline{R\left(\tau\right)}\nabla p_\theta(\tau)  \log p_{\theta}\left(\tau\right)\\
+=\frac{1}{N} \sum_{n=1}^{N} R\left(\tau^{n}\right)  \log \nabla p_{\theta}\left(\tau^{n}\right)+\sum_{\tau} \underline{R\left(\tau\right)}\nabla p_\theta(\tau)  \log p_{\theta}\left(\tau\right)\\
+=\frac{1}{N} \sum_{n=1}^{N} \sum_{t=1}^{T_{n}} R\left(\tau^{n}\right)  \nabla \log p_{\theta}\left(a_{t}^{n} \mid s_{t}^{n}\right)+\sum_{\tau} \underline{R\left(\tau\right)}\nabla p_\theta(\tau)  \log p_{\theta}\left(\tau\right)
+\end{array}</script><ul>
+<li>PPO的损失函数，是从单个状态动作对的期望回报的梯度公式 ，添加重要性采样的权重，开始反向推到的, 最后一步是均值和不定积分的换序。</li>
+</ul>
+<script type="math/tex; mode=display">
+\mathbb{E}_{\left(s_{t}, a_{t}\right) \sim \pi_{\theta^{\prime}}}\left[\frac{p_{\theta}\left(s_{t}, a_{t}\right)}{p_{\theta^{\prime}}\left(s_{t}, a_{t}\right)} A^{\theta}\left(s_{t}, a_{t}\right) \nabla \log p_{\theta}\left(a_{t}^{n} \mid s_{t}^{n}\right)\right] \\
+=
+\mathbb{E}_{\left(s_{t}, a_{t}\right) \sim \pi_{\theta^{\prime}}}\left[\frac{p_{\theta}\left(a_{t} \mid s_{t}\right)}{p_{\theta^{\prime}}\left(a_{t} \mid s_{t}\right)} A^{\theta^{\prime}}\left(s_{t}, a_{t}\right) \nabla \log p_{\theta}\left(a_{t}^{n} \mid s_{t}^{n}\right)\right]        \\
+求上面随机变量均值的原函数=
+\mathbb{E}_{(s_t,a_t)\sim\pi_{\theta^{\prime}}}\left[\frac{p_\theta\left(a_t|s_t\right)}{p_{\theta^{\prime}}\left(a_t|s_t\right)}A^{\theta^{\prime}}\left(s_t,a_t\right)\right]</script><ul>
+<li><p>其实可以不用这么麻烦，直接将 重要性采样的权重加在$\mathbb{E}_{(s_t,a_t)\sim\pi_{\theta^{\prime} } } \left[A^{\theta^{\prime} }\left(s_t,a_t\right)\right]$这个随机变量均值中即可，因为这个是单个状态动作对的回报期望，就是要梯度上升的目标，而重要性采样就是影响了这个期望。<br>因为RL解决问题具有动态规划的最优子结构性，因此每一个状态动作对都达到了回报均值的最大值，整体也就达到最值。</p>
+</li>
+<li><p>DQN是Qlearning的变体，都基于价值的算法，是广义策略迭代，它显式学习Q价值函数，隐式地通过Q函数ε-贪心地学习策略。可以数学证明ε-贪心，这种策略迭代是可以保证Q价值函数是单增的。DouleQ是因为Q表格更新简单，而用Q网络拟合Q函数需要梯度下降的特殊技巧，通过固定targetQ，更新另一个Q，使得优化过程更稳定。经验回访技巧是将历史采样的记录放在缓存池，当前更新Q网络的数据不一定是来自当前策略，还可能是旧的策略，这种做法是妥妥的异策略。<a target="_blank" rel="noopener" href="https://blog.csdn.net/athrunsunny/article/details/126976433">DQN回放池是异策略</a>。it works。</p>
+</li>
+<li><p>为什么PPO异策略采样，需要添加权重，而DQN不需要添加权重，可以直接学习旧的策略采样的经验？因为更新的目标公式不同。</p>
+<p>$Q_\pi(s,a)=\mathbb{E}_\pi\left[r_{t+1}+\gamma Q_\pi\left(s_{t+1},a_{t+1}\right)\mid s_t=s,a_t=a\right]$,这是Q网络更新的贝尔曼期望方程。</p>
+<p>$Q_\pi(s,a)=R(s,a)+\gamma\sum_{s’\in S}p\left(s’\mid s,a\right)V_\pi\left(s’\right)$这是离散近似的公式。</p>
+<p>可以看到，R(s,a)是确定的，sarsa在$Q_{t+1}$前没有max，因此sarsa需要大量采样，得到对于$Q_{t+1}$的期望的近似。而DQN是q-learning的变体。因为q-learning是在$Q_{t+1}$有max操作，类似于用贝尔曼最优方程更新（在最终收敛条件下，贝尔曼最优方程是成立的），它不需要大量采样来逼近期望，他选择最大值。所以q-learning是因为1.$r_{t+1}$来自环境是确定的2.max取值不需要求期望，因此q-learning不需要大量数据来逼近Q的贝尔曼期望方程的迭代。因此，即使DQN的经验回访池中有历史的差别很大的策略采样的记录（s,a,r,s’,a’)也没关系，因为不要求使用当前的策略pi大量采样来近似。另外历史数据中可能保留$Q_{t+1}$中更大的值，是的max$Q_{t+1}$更加准确，样本更加丰富。 </p>
+<p>对于DQN的经验回访中有记录来自异策略的问题是，因为策略不一样，因此对于一些Q(s,a)的更新频率不同，因为只有采样到（s,a,r,s’,a’)才能更新Q（s，a）。对于更新公式是没有影响的，因为使用max更新，采样到的记录频率分布不同，并不影响更新公式，只有没有采样不到最大的Q值，才影响Q网络的更新准确性。</p>
+<p>而PPO中，很明显要优化的目标是$\mathbb{E}_{(s_t,a_t)\sim\pi_{\theta^{\prime}}}\left[A^{\theta^{\prime}}\left(s_t,a_t\right)\right]$，当策略不同时，很明显从该状态动作出发得到的优势函数（回报）是不同的。因此需要用当前的策略，大量采样，得到对该优化目标（是一个随机变量的均值）的近似，因此需要加重要性采样的权重。</p>
+</li>
+<li><p>DQN的不足，rainbow，只是优化了一些训练的问题，对于q-learning的理论没有优化。</p>
+</li>
+<li><p>对于DQN找argmax a困难的问题，怎么针对连续动作寻找argmax a？采样，梯度上升，改变网络架构，演员评论员算法。</p>
+</li>
+<li><p>优势演员评论员算法：是策略梯度的变体。用V网络代替原来的优势函数，原来优势函数是通过大量采样来逼近期望回报的，现在用评论员（基于价值的算法）（Q/V网络）直接输出优势函数的期望，更稳定。策略网络和V网络耦合：为了对s的输入特征编码相同。异步优势演员-评论员算法：相当于多线程更新网络，而没有使用类似于PPO的异策略。</p>
+</li>
+<li><p>路径衍生梯度策略:是DQN的变体。主要解决 动作的连续性问题（argmax困难）。通过固定Q，更新策略网络，使得Q网络最大，此时策略网络就相当于经过了argmax $\pi$的策略迭代。此时策略网络相当于生成对抗网络的生成器，Q网络相当于生成对抗网络的判别器。</p>
+</li>
+<li><p>对稀疏奖励，设计奖励：设置内在好奇心（加强探索），课程学习（由简入难），分层强化学习。</p>
+</li>
+<li><p>模仿学习：解决没有奖励函数的问题，行为克隆（监督学习），逆强化学习（设计出奖励函数，通过生成对抗思路），第三人称模仿学习。</p>
+</li>
+<li><p>DDPG（<strong>deep deterministic policy gradient</strong>，深度确定策略梯度），是PDPG（<strong>pathwise derivative policy gradient</strong>，路径衍生策略梯度）的一种实现，可查看<a target="_blank" rel="noopener" href="https://rail.eecs.berkeley.edu/deeprlcoursesp17/docs/lec7.pdf">Policy Gradient Methods: Pathwise Derivative Methods and Wrap-up (berkeley.edu)</a>，<a target="_blank" rel="noopener" href="https://datawhalechina.github.io/easy-rl/#/chapter9/chapter9">第九章 演员-评论员算法 (datawhalechina.github.io)评论区留言</a>。主要是为了解决DQN难以处理连续动作的问题。DDPG可以看成一种类似生成对抗网络。通过优化策略网络，来进行广义策略迭代，选取$\pi_{i+1}(s)=\arg\max_aQ_{\pi_i}(s,a)$。 </p>
+</li>
+</ul>
+<blockquote>
+<p>Acknowledgement:参考蘑菇书，整理出这样的RL学习路线</p>
+</blockquote>
+</article><div class="tag_share"><div class="post_share"><div class="social-share" data-image="/orange" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/93373861.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">joe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/shuaifanfan"><i class="fab fa-github"></i><span>Github</span></a></div><div class="sticky_layout"></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By joe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadWaline () {
+  function insertCSS () {
+    const link = document.createElement("link")
+    link.rel = "stylesheet"
+    link.href = "https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.css"
+    document.head.appendChild(link)
+  }
+
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'co.shuaifan.tk',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline()
+  else {
+    insertCSS()
+    getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.js').then(initWaline)
+  }
+}
+
+if ('Waline' === 'Waline' || !true) {
+  if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script></div></body></html>
