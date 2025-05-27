@@ -1,0 +1,582 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>基于python的即时通讯软件开发 | joe</title><meta name="keywords" content="软件开发"><meta name="author" content="joe"><meta name="copyright" content="joe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="引言项目概述项目目的：我们的项目旨在构建一款名为Echoplex的实时聊天软件: 项目意义：  学习机会： 通过此项目，可以深入了解Python Socket编程和Qt框架，提高编程技能。 自定义功能： 可以根据用户的需求添加自定义功能，如文件传输、群聊、语音通话等。  参考资料：  Python Socket编程文档：https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;socke">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于python的即时通讯软件开发">
+<meta property="og:url" content="http://example.com/2023/08/27/%E5%9F%BA%E4%BA%8Epython%E7%9A%84%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/index.html">
+<meta property="og:site_name" content="joe">
+<meta property="og:description" content="引言项目概述项目目的：我们的项目旨在构建一款名为Echoplex的实时聊天软件: 项目意义：  学习机会： 通过此项目，可以深入了解Python Socket编程和Qt框架，提高编程技能。 自定义功能： 可以根据用户的需求添加自定义功能，如文件传输、群聊、语音通话等。  参考资料：  Python Socket编程文档：https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;socke">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/orange">
+<meta property="article:published_time" content="2023-08-27T03:28:31.000Z">
+<meta property="article:modified_time" content="2025-05-27T04:38:58.076Z">
+<meta property="article:author" content="joe">
+<meta property="article:tag" content="软件开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/orange"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/08/27/%E5%9F%BA%E4%BA%8Epython%E7%9A%84%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '基于python的即时通讯软件开发',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-05-27 12:38:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="joe" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/93373861.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">joe</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">基于python的即时通讯软件开发</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">Created</span><time datetime="2023-08-27T03:28:31.000Z" title="Created 2023-08-27 11:28:31">2023-08-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/python%E5%BC%80%E5%8F%91/">python开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">4.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>12min</span></span></div></div></div><article class="post-content" id="article-container"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h3><p>项目目的：我们的项目旨在构建一款名为<a target="_blank" rel="noopener" href="https://github.com/TT2TER/Echoplex">Echoplex的实时聊天软件</a>:</p>
+<p><strong>项目意义：</strong></p>
+<ol>
+<li>学习机会： 通过此项目，可以深入了解Python Socket编程和Qt框架，提高编程技能。</li>
+<li>自定义功能： 可以根据用户的需求添加自定义功能，如文件传输、群聊、语音通话等。</li>
+</ol>
+<p><strong>参考资料：</strong></p>
+<ol>
+<li>Python Socket编程文档：<a target="_blank" rel="noopener" href="https://docs.python.org/3/library/socket.html">https://docs.python.org/3/library/socket.html</a></li>
+<li>Qt框架官方文档：<a target="_blank" rel="noopener" href="https://doc.qt.io/qt-6.2/index.html">https://doc.qt.io/qt-6.2/index.html</a></li>
+<li>《Python网络编程》（作者：Dr. M. O. Faruque Sarker和Sam Washington）：这本书介绍了Python网络编程的基础知识，包括Socket编程。</li>
+<li>在线编程社区和论坛：如Stack Overflow，Reddit的Python板块等，</li>
+<li>同类项目和开源即时通讯应用的源代码</li>
+</ol>
+<h3 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h3><p><strong>硬件环境： </strong>Linux/Windows/Mac</p>
+<p><strong>软件环境：</strong></p>
+<p>设备需要有摄像头与摄像头驱动<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Python3<span class="number">.8</span></span><br><span class="line">numpy==<span class="number">1.24</span><span class="number">.4</span></span><br><span class="line">openai_whisper==<span class="number">20230314</span></span><br><span class="line">opencv_contrib_python==<span class="number">4.8</span><span class="number">.0</span><span class="number">.76</span></span><br><span class="line">PyAudio==<span class="number">0.2</span><span class="number">.11</span></span><br><span class="line">PyJWT==<span class="number">2.8</span><span class="number">.0</span></span><br><span class="line">PySide2==<span class="number">5.15</span><span class="number">.2</span><span class="number">.1</span></span><br><span class="line">PySide2_Fluent_Widgets==<span class="number">1.1</span><span class="number">.8</span></span><br><span class="line">rsa==<span class="number">4.9</span></span><br></pre></td></tr></table></figure></p>
+<p>有关Pyside和whisper，请参考官方在github上的安装流程<br><a target="_blank" rel="noopener" href="https://github.com/zhiyiYo/PyQt-Fluent-Widgets/tree/PySide2">https://github.com/zhiyiYo/PyQt-Fluent-Widgets/tree/PySide2</a><br><a target="_blank" rel="noopener" href="https://github.com/openai/whisper">https://github.com/openai/whisper</a><br>由于PyAudio库较为古老，直接pip install可能报错,请尝试<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install portaudio19-dev</span><br><span class="line">sudo apt-get install python3-all-dev</span><br><span class="line">pip install pyaudio</span><br></pre></td></tr></table></figure></p>
+<p>如果为linux系统，需要额外下载<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gtk2.0-dev and pkg-config #以进行视频通话(cv.destroyallwindows的报错)</span><br><span class="line">pip install opencv-python-headless #以解决opencv与pyside的plugin冲突导致的报错</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-需求分析"><a href="#2-需求分析" class="headerlink" title="2 需求分析"></a>2 需求分析</h2><ul>
+<li style="list-style: none"><input type="checkbox" checked></input> 用户注册：允许用户创建新帐户，提供用户名和密码，注册模块负责。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 用户登录：已注册用户可以使用用户名和密码登录，登录模块负责。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 私聊功能：允许用户与其他用户一对一聊天，需要发消息模块负责。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 群聊功能：支持多用户同时在一个聊天群中聊天。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 好友请求：用户可以向其他用户发送好友请求，需要对方确认，需要好友管理模块负责。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 创建用户界面：使用Qt框架创建直观的用户界面，包括主窗口、聊天窗口、联系人列表等，需要qt负责。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 用户登录界面：提供用户友好的登录界面，包括用户名和密码输入字段需要qt和客户端沟通。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 用户注册界面：创建用户注册界面，包括新用户的注册信息，需要qt负责。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 主聊天窗口：设计用于发送和接收消息的聊天窗口。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 联系人列表：显示用户的联系人列表，包括在线状态和最新消息提示，需要登陆时拉取。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 表情和图片消息：允许用户发送表情符号和图片。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 文件传输：用户可以发送和接收文件，确保文件传输的可靠性和安全性，需要文件传输模块负责。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 用户通知：当有新消息或好友请求时，向用户发送通知。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 跨平台支持：确保即时通讯软件可以在不同操作系统上运行，如Windows、macOS和Linux。</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 数据库支持：将用户数据、消息历史记录等信息存储在数据库中，以实现持久性存储。</li>
+<li style="list-style: none"><input type="checkbox"></input> 人脸验证支持：人脸验证可以作为二步验证，再输入密码后，进行第二次验证。<h2 id="3-概要设计"><a href="#3-概要设计" class="headerlink" title="3 概要设计"></a>3 概要设计</h2></li>
+</ul>
+<h3 id="系统架构："><a href="#系统架构：" class="headerlink" title="系统架构："></a>系统架构：</h3><p>Echoplex即时通讯软件可以采用客户端-服务器-客户端架构，其中客户端负责用户界面和消息发送/接收，服务器负责消息路由和用户管理。这种架构具有良好的可扩展性和性能。</p>
+<h3 id="技术选择"><a href="#技术选择" class="headerlink" title="技术选择"></a>技术选择</h3><p>客户端： 使用Python作为主要编程语言，Qt框架用于用户界面设计。Python的Socket库用于与服务器通信。<br>服务器： 同样使用Python的Socket库实现服务器端。<br>数据存储： 使用SQLite数据库来存储用户数据和消息历史记录。SQLite是一个轻量级的嵌入式数据库，适合小型应用程序。</p>
+<h3 id="通信协议："><a href="#通信协议：" class="headerlink" title="通信协议："></a>通信协议：</h3><p>定义一个简单的通信协议，包括消息格式、命令和状态码。协议应包括以下元素：<br>•    注册和登录： 客户端发送注册和登录请求，服务器验证用户凭据。<br>•    消息格式： 定义文本消息、图片消息和文件传输消息的格式。<br>•    命令： 包括发送消息、接收消息、添加好友、创建群聊等命令。<br>•    状态码： 用于指示请求是否成功，以及错误的类型。</p>
+<h3 id="数据库设计："><a href="#数据库设计：" class="headerlink" title="数据库设计："></a>数据库设计：</h3><p>用户数据表（User）：<br>•    字段：用户ID（唯一标识符）、用户名、密码（加密存储）。<br>•    用户表存储所有注册用户的信息。<br>消息数据表（Message）：<br>•    字段：消息ID（唯一标识符）、发送者ID、接收者ID、消息内容、消息类型（文本、图片、文件）、发送时间等。<br>•    消息表用于存储所有消息的历史记录，包括私聊和群聊。<br>好友关系表（Friendship）：<br>•    字段：用户1 ID、用户2 ID、关系状态。<br>•    好友关系表用于存储用户之间的好友关系，以及好友请求的状态。<br>群聊数据表（GroupChat）：<br>•    字段：群聊ID、群聊名称、创建者ID、成员列表等。<br>•    群聊数据表用于存储群聊的信息，包括成员列表。</p>
+<h3 id="核心功能描述："><a href="#核心功能描述：" class="headerlink" title="核心功能描述："></a>核心功能描述：</h3><p><strong>用户注册和登录：</strong><br>用户可以通过提供用户名和密码注册新账户。<br>已注册用户可以使用用户名和密码登录。<br><strong>用户管理和通信：</strong><br>用户可以添加好友，发送和接收即时消息。<br>用户可以创建和参与群聊，发送群聊消息。<br>实现消息的实时发送和接收，确保低延迟和可靠性。<br><strong>用户界面：</strong><br>使用Qt框架创建用户友好的界面，包括登录和注册界面、主界面、聊天窗口和联系人列表。<br>实现通知机制，通知用户有新消息或好友请求。<br><strong>文件传输：</strong><br>允许用户发送和接收文件，确保文件传输的可靠性和安全性。<br><strong>群聊支持：</strong><br>用户可以创建群聊，邀请好友加入，发送和接收群聊消息。<br><strong>视频通话</strong><br>用户可以和在线用户建立起p2p视频通话。<br><strong>人脸验证</strong><br>人脸验证可以作为二步验证，再输入密码后，进行第二次验证。<br><strong>语音识别</strong><br>基于openai-whisper的语音识别包，可以在聊天窗口直接发语音转文字。</p>
+<h2 id="4-实现方案"><a href="#4-实现方案" class="headerlink" title="4 实现方案"></a>4 实现方案</h2><p>好友管理模块可实现增删好友，拉取好友列表和分组。<br>函数实现和流程图如下。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Client/user_addfriend</strong></td>
+<td>客户端请求加好友</td>
+<td>客户端将加好友请求发送给服务器</td>
+</tr>
+<tr>
+<td><strong>Server/auser/addfriend</strong></td>
+<td>服务器处理加好友请求</td>
+<td>服务端将好友请求转发给对方，若对方不在线，则缓存</td>
+</tr>
+<tr>
+<td><strong>Client/rcv_addfriend</strong><br><strong>Client/ans_addfriend</strong></td>
+<td>客户端处理好友请求</td>
+<td>客户端收取好友请求，并将是否同意返回给服务器</td>
+</tr>
+<tr>
+<td><strong>Sever/ans_addfriend</strong></td>
+<td>服务器处理好友请求回复</td>
+<td>转发好友请求结果，若对方同意，则在数据库存入好友记录</td>
+</tr>
+<tr>
+<td><strong>Client/rcv_ans_addfriend</strong></td>
+<td>客户端收取请求结果</td>
+<td>客户端收取好友请求结果</td>
+</tr>
+<tr>
+<td><strong>Client/del_friend</strong></td>
+<td>客户端请求删除好友</td>
+<td>客户端将删除好友的的请求发给服务器</td>
+</tr>
+<tr>
+<td><strong>Server/del_friend</strong></td>
+<td>服务端处理删除好友请求</td>
+<td>若id存在，则更新好友数据库，否则，报错</td>
+</tr>
+<tr>
+<td><strong>Client/pull_friendlist</strong></td>
+<td>客户端请求拉取好友</td>
+<td>客户端发起拉取好友列表和分组的请求</td>
+</tr>
+<tr>
+<td><strong>Server/pull_friendlist</strong></td>
+<td>服务端处理好友列表拉取请求</td>
+<td>客户端交好友列表及分组信息返回给用户，若无好友则返回空</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="/images/imessage/image1.png" width="80%" height="80%" /><br><img src="/images/imessage/image2.png" width="80%" height="80%" /></p>
+<p><strong>运行结果图如下</strong></p>
+<p>1.请求添加好友，需要输入好友id</p>
+<p><img src="/images/imessage/image3.jpeg" width="80%" height="80%" /></p>
+<p>2.好友id不存在，则会报错。若好友id存在，则正常发送。<br> <img src="/images/imessage/image4.jpeg" width="80%" height="80%" /></p>
+<p>3.用户若在线，则会直接收到好友请求，并显示未读红点。若用户不在线，则会缓存好友请求，用户上线自动收取好友请求。<br> <img src="/images/imessage/image5.jpeg" width="80%" height="80%" /></p>
+<p>4.用户可以选择接受或者拒绝。若拒绝，则原来用户会显示“对方拒绝您的请求”。若接受则会成为好友。<br> <img src="/images/imessage/image6.png" width="80%" height="80%" /></p>
+<p>5.接受后，对方陈工出现在好友对话窗口中。<br> <img src="/images/imessage/image7.jpeg" width="80%" height="80%" /><br>具体代码如下：</p>
+ <div style="display: flex; justify-content: center;">
+     <img src="/images/imessage/image8.png"  />
+<img src="/images/imessage/image9.png"  />
+</div>
+
+ <div style="display: flex; justify-content: center;">
+<img src="/images/imessage/image10.png"  />
+<img src="/images/imessage/image11.png"  />
+</div>
+
+ <div style="display: flex; justify-content: center;">
+<img src="/images/imessage/image17.png" />
+<img src="/images/imessage/image13.png"  />
+</div>
+ <div style="display: flex; justify-content: center;">
+<img src="/images/imessage/image14.png" />
+<img src="/images/imessage/image15.png" />
+</div>
+ <div style="display: flex; justify-content: center;">
+<img src="/images/imessage/image16.png" />
+<img src="/images/imessage/image12.png"  />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="5-系统测试"><a href="#5-系统测试" class="headerlink" title="5 系统测试"></a>5 系统测试</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>测试说明</th>
+<th>测试方法</th>
+<th>预期结果</th>
+<th>输出</th>
+<th>bug及解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>增加记住密码功能，使用token验证登录</td>
+<td>记住密码登录，第二次登录使用token登录</td>
+<td>登录成功、正常进入系统</td>
+<td>无法正常收消息</td>
+<td>token登录后未维护服务器中在线用户列表，导致消息全进离线信箱，已解决</td>
+</tr>
+<tr>
+<td>测试注册是否自动验证所输信息合法性</td>
+<td>分别使用弱密码、非法邮箱注册</td>
+<td>无法注册</td>
+<td>弱密码无法注册，非法邮箱正常注册，导致无法正常使用找回密码功能</td>
+<td>使用正则表达式验证邮箱合法性，确保用户可以使用邮箱正常找回密码</td>
+</tr>
+<tr>
+<td>测试能否正常找回密码</td>
+<td>注册新账号，使用找回密码功能</td>
+<td>该账号邮箱收到含有账号密码的邮件</td>
+<td>收到了sha256加密的密码，相当于还是没找回</td>
+<td>数据库使用sha256加密存储密码导致，改用rsa加密存储密码，已解决</td>
+</tr>
+<tr>
+<td>登录后拉取离线消息、群组列表和好友列表</td>
+<td>登录一个存在离线消息、多个好友和多个群聊的账号</td>
+<td>正常拉取消息、好友列表和群聊列表</td>
+<td>服务器报错，无法完成登录</td>
+<td>TCP粘连，服务器接收线程无法正常解析请求，写函数将每个JSON协议请求分离放入队列，按顺序处理请求，已解决</td>
+</tr>
+<tr>
+<td>由本表4号用例可知客户端也存在潜在的TCP粘连问题</td>
+<td></td>
+<td></td>
+<td></td>
+<td>使用和服务器相同的解决办法，已解决</td>
+</tr>
+<tr>
+<td>测试服务端TCP粘连问题是否解决</td>
+<td>多个不同主机，每个主机开多个客户端，每次登录拉取离线消息、群组和聊天列表</td>
+<td>服务器正常处理请求，不报错</td>
+<td>一台主机无法登录第二个账号</td>
+<td>服务器使用了单一队列导致不同线程中处理请求混乱，区分不同线程队列，已解决</td>
+</tr>
+<tr>
+<td>测试TCP保活机制</td>
+<td>分别测试客户端与服务端正常通讯情况下，服务端与客户端长期不进行请求操作，以及服务端和客户端分别各自主动异常掉线后对方是否有提示</td>
+<td>长时间未操作双方通讯保持，各自断网后对方有掉线提醒</td>
+<td>客户端无掉线提醒</td>
+<td>增加类似心跳包功能，一旦客户端通讯失败后弹出异常掉线提醒，已解决</td>
+</tr>
+<tr>
+<td>测试服务器与数据库正常交互</td>
+<td>使用注册功能注册新账号</td>
+<td>新账号注册成功、写入数据库</td>
+<td>服务器报错，无法正常写入数据库</td>
+<td>数据库连接不能以参数形式传入thread，已解决</td>
+</tr>
+<tr>
+<td>测试创建群聊</td>
+<td>使用同一账号多次创建群聊，多个账号多次创建群聊</td>
+<td>根据所需正常更新数据库</td>
+<td>同一账号只能创建一个群聊</td>
+<td>数据库群组表中群主属性被设成”UNIQUE”，已解决</td>
+</tr>
+<tr>
+<td>测试创建群聊</td>
+<td>使用同一账号多次创建群聊，多个账号多次创建群聊</td>
+<td>根据所需正常更新数据库</td>
+<td>无法创建、无法更新数据库</td>
+<td>数据库中”group”为关键字，需要加”[]”，已解决</td>
+</tr>
+<tr>
+<td>测试两个用户之间收发消息</td>
+<td>不同主机开客户端，加好友、收发消息</td>
+<td>正常加好友、正常收发消息</td>
+<td>正常加好友和收发消息，但缺乏提醒</td>
+<td>收到消息后更新右侧聊天列表，已解决</td>
+</tr>
+<tr>
+<td>测试收发消息提醒</td>
+<td>不同主机开客户端，加好友、收发消息</td>
+<td>正常加好友、正常收发消息，存在提醒</td>
+<td>正常加好友、正常收发消息，存在提醒，但不醒目</td>
+<td>使用小红点标注新好友请求和新消息，已解决</td>
+</tr>
+<tr>
+<td>加入本地存储聊天记录功能</td>
+<td>不同主机开客户端，加好友、收发消息，查看本地文件内是否存在聊天记录</td>
+<td>正常通信聊天，同时以文件形式保存了聊天记录</td>
+<td>无法收到消息了</td>
+<td>若客户端不存在对应文件目录则导致该错误。加入是否存在目录的判断，如不存在则创建，已解决</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>某次测试下，收到好友消息后右侧聊天列表多出了一个与该好友的聊天</td>
+<td>for循环中break缩进错误导致循环只执行一次。改正break缩进，已解决</td>
+</tr>
+<tr>
+<td>测试本地存储聊天记录功能</td>
+<td>不同主机开客户端，加好友、收发消息，查看本地文件内是否存在聊天记录</td>
+<td>正常通信聊天，同时以文件形式保存了聊天记录</td>
+<td>正常保存了聊天记录，但加载时时间顺序反了</td>
+<td>聊天记录本身按时间顺序存储，读取时列表list.reverse()一下就行，已解决</td>
+</tr>
+<tr>
+<td>测试收发消息后聊天框能否正常显示消息</td>
+<td>多个主机、不同客户端间互相收发消息</td>
+<td>聊天消息以时间顺序显示双方的聊天气泡</td>
+<td>某些情况下无法显示好友姓名</td>
+<td>添加新好友后未维护本地好友列表导致本地不知道好友姓名。新增添加好友后更新好友列表，已解决</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>某些情况下消息气泡不能加载</td>
+<td>未找到好友头像导致。将头像存储相对路径改为绝对路径，已解决</td>
+</tr>
+<tr>
+<td>新增拉取群聊后广播给所有群成员，并由群主自动发送”群聊已创建”的消息，测试创建群聊是否正常</td>
+<td>不同主机、多个客户端，多次拉取群聊</td>
+<td>正常拉取，所有群成员正常收到</td>
+<td>某些情况下，群主无法收到创建成功的消息，也不自动发送通知</td>
+<td>若拉取群成员时未添加群主自己，则导致此错误。服务器处理时增加判断，确保群主自己收到返回消息，已解决</td>
+</tr>
+<tr>
+<td>测试群聊发送文件功能</td>
+<td>不同主机，多个客户端拉取群聊，发送文件</td>
+<td>所有群成员可接收本群内所有文件</td>
+<td>群无法接收文件</td>
+<td>收消息时不增加群聊时对文件型消息特判导致收文件与接收文本消息混淆，已解决</td>
+</tr>
+<tr>
+<td>测试文件收发功能是否正常</td>
+<td>不同主机客户端加好友后，互相收发文件</td>
+<td>文件能正常收发和打开</td>
+<td>可以正常收发和打开，但不醒目</td>
+<td>添加文件收发的进度条，已解决</td>
+</tr>
+<tr>
+<td>测试文件收发功能是否正常</td>
+<td>不同主机客户端加好友后，互相收发文件</td>
+<td>文件能正常收发和打开</td>
+<td>某些情况下文件不能正常发送</td>
+<td>发文件对应的功能函数结束后相应的子线程被销毁导致无法完成发送文件。在程序public(shared_module)模块中添加实例化的收发文件线程类对象，保证线程不被异常销毁，已解决</td>
+</tr>
+<tr>
+<td>测试群聊发送文件功能</td>
+<td>不同主机，多个客户端拉取群聊，发送文件</td>
+<td>所有群成员可接收本群内所有文件</td>
+<td>群无法接收文件</td>
+<td>收消息时不增加群聊时对文件型消息特判导致收文件与接收文本消息混淆，已解决</td>
+</tr>
+<tr>
+<td>测试上传更新头像功能</td>
+<td>本机上传头像，测试好友是否可以自动接收、更新头像</td>
+<td>头像可以正常发送并更新给所有好友</td>
+<td>好友不能正常接收</td>
+<td>服务器在接收头像时立刻将广播发送给所有好友，所有好友自动下载时服务器未完成接收新头像，导致读取到的头像filesize为0。服务器完成接收后在发送广播，已解决</td>
+</tr>
+<tr>
+<td>测试上传更新头像功能</td>
+<td>本机上传头像，测试好友是否可以自动接收、更新头像</td>
+<td>头像可以正常发送并更新给所有好友</td>
+<td>不能正常上传</td>
+<td>上传了不支持的头像文件类型如webp\gif等导致。新增限制上传头像类型，已解决</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article><div class="tag_share"><div class="post_share"><div class="social-share" data-image="/orange" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/93373861.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">joe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/shuaifanfan"><i class="fab fa-github"></i><span>Github</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">项目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">1.2.</span> <span class="toc-text">运行环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">2 需求分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.</span> <span class="toc-text">3 概要设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">系统架构：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E6%8B%A9"><span class="toc-number">3.2.</span> <span class="toc-text">技术选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%EF%BC%9A"><span class="toc-number">3.3.</span> <span class="toc-text">通信协议：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%EF%BC%9A"><span class="toc-number">3.4.</span> <span class="toc-text">数据库设计：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD%E6%8F%8F%E8%BF%B0%EF%BC%9A"><span class="toc-number">3.5.</span> <span class="toc-text">核心功能描述：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88"><span class="toc-number">4.</span> <span class="toc-text">4 实现方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95"><span class="toc-number">5.</span> <span class="toc-text">5 系统测试</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By joe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadWaline () {
+  function insertCSS () {
+    const link = document.createElement("link")
+    link.rel = "stylesheet"
+    link.href = "https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.css"
+    document.head.appendChild(link)
+  }
+
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'co.shuaifan.tk',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline()
+  else {
+    insertCSS()
+    getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.js').then(initWaline)
+  }
+}
+
+if ('Waline' === 'Waline' || !true) {
+  if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script></div></body></html>

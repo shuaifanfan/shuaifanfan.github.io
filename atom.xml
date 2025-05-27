@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-05-26T17:59:06.359Z</updated>
+  <updated>2025-05-27T08:49:55.701Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,109 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GCN和自回归顺序MADRL的空-地协同感知研究</title>
+    <link href="http://example.com/2025/05/27/GCN%E5%92%8C%E8%87%AA%E5%9B%9E%E5%BD%92%E9%A1%BA%E5%BA%8FMADRL%E7%9A%84%E7%A9%BA-%E5%9C%B0%E5%8D%8F%E5%90%8C%E6%84%9F%E7%9F%A5%E7%A0%94%E7%A9%B6/"/>
+    <id>http://example.com/2025/05/27/GCN%E5%92%8C%E8%87%AA%E5%9B%9E%E5%BD%92%E9%A1%BA%E5%BA%8FMADRL%E7%9A%84%E7%A9%BA-%E5%9C%B0%E5%8D%8F%E5%90%8C%E6%84%9F%E7%9F%A5%E7%A0%94%E7%A9%B6/</id>
+    <published>2025-05-27T08:49:55.000Z</published>
+    <updated>2025-05-27T08:49:55.701Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DRL-rainbow复现</title>
+    <link href="http://example.com/2025/05/27/DRL-rainbow%E5%A4%8D%E7%8E%B0/"/>
+    <id>http://example.com/2025/05/27/DRL-rainbow%E5%A4%8D%E7%8E%B0/</id>
+    <published>2025-05-27T08:47:59.000Z</published>
+    <updated>2025-05-27T08:47:59.489Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Bi-LSTM/Transformer做中文短文本分类</title>
+    <link href="http://example.com/2025/05/27/Bi-LSTM-Transformer%E5%81%9A%E4%B8%AD%E6%96%87%E7%9F%AD%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/"/>
+    <id>http://example.com/2025/05/27/Bi-LSTM-Transformer%E5%81%9A%E4%B8%AD%E6%96%87%E7%9F%AD%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/</id>
+    <published>2025-05-27T08:44:47.000Z</published>
+    <updated>2025-05-27T08:44:47.480Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>prompt-finetune抽取新闻文本关键事件要素</title>
+    <link href="http://example.com/2025/05/27/prompt-finetune%E6%8A%BD%E5%8F%96%E6%96%B0%E9%97%BB%E6%96%87%E6%9C%AC%E5%85%B3%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%A6%81%E7%B4%A0/"/>
+    <id>http://example.com/2025/05/27/prompt-finetune%E6%8A%BD%E5%8F%96%E6%96%B0%E9%97%BB%E6%96%87%E6%9C%AC%E5%85%B3%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%A6%81%E7%B4%A0/</id>
+    <published>2025-05-27T08:43:15.000Z</published>
+    <updated>2025-05-27T08:43:15.688Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微调codeT5+做NL2Code</title>
+    <link href="http://example.com/2025/05/27/%E5%BE%AE%E8%B0%83codeT5-%E5%81%9ANL2Code/"/>
+    <id>http://example.com/2025/05/27/%E5%BE%AE%E8%B0%83codeT5-%E5%81%9ANL2Code/</id>
+    <published>2025-05-27T08:41:15.000Z</published>
+    <updated>2025-05-27T08:41:15.900Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GAN做手写数字生成</title>
+    <link href="http://example.com/2025/05/27/GAN%E5%81%9A%E6%89%8B%E5%86%99%E6%95%B0%E5%AD%97%E7%94%9F%E6%88%90/"/>
+    <id>http://example.com/2025/05/27/GAN%E5%81%9A%E6%89%8B%E5%86%99%E6%95%B0%E5%AD%97%E7%94%9F%E6%88%90/</id>
+    <published>2025-05-27T08:38:24.000Z</published>
+    <updated>2025-05-27T08:38:24.357Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TextCNN做关系抽取</title>
+    <link href="http://example.com/2025/05/27/TextCNN%E5%81%9A%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/"/>
+    <id>http://example.com/2025/05/27/TextCNN%E5%81%9A%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/</id>
+    <published>2025-05-27T08:37:34.000Z</published>
+    <updated>2025-05-27T08:37:34.684Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Ego-Planner无人机自主飞行项目总结</title>
-    <link href="http://example.com/2025/05/27/Ego-Planner%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%87%AA%E4%B8%BB%E9%A3%9E%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
-    <id>http://example.com/2025/05/27/Ego-Planner%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%87%AA%E4%B8%BB%E9%A3%9E%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</id>
-    <published>2025-05-26T17:12:35.000Z</published>
-    <updated>2025-05-26T17:59:06.359Z</updated>
+    <link href="http://example.com/2025/04/27/Ego-Planner%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%87%AA%E4%B8%BB%E9%A3%9E%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2025/04/27/Ego-Planner%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%87%AA%E4%B8%BB%E9%A3%9E%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</id>
+    <published>2025-04-26T17:12:35.000Z</published>
+    <updated>2025-05-27T04:38:01.151Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="论文项目调研"><a href="#论文项目调研" class="headerlink" title="论文项目调研"></a>论文项目调研</h2><p><img src="/images/Ego/image42.png" width="50%" height="50%" /></p><div style="display: flex; justify-content: center;">    <img src="/images/Ego/image40.png" width="300"/>    <img src="/images/Ego/image42.png" width="300"/></div><div style="display: flex; justify-content: center;">    <img src="/images/Ego/image41.png" width="300"/>    <img src="/images/Ego/image44.png" width="300"/></div><div style="display: flex; justify-content: center;">    <img src="/images/Ego/image39.png" width="260"/>    <img src="/images/Ego/image43.png" width="340"/></div><h2 id="仿真验证和学习"><a href="#仿真验证和学习" class="headerlink" title="仿真验证和学习"></a>仿真验证和学习</h2><div style="display: flex; justify-content: center;">    <img src="/images/Ego/image46.png" width="300"/>    <img src="/images/Ego/image47.png" width="380"/></div><div style="display: flex; justify-content: center;">    <img src="/images/Ego/image48.png" width="300"/>    <img src="/images/Ego/image49.png" width="180"/></div><h2 id="无人机硬件组装"><a href="#无人机硬件组装" class="headerlink" title="无人机硬件组装"></a>无人机硬件组装</h2><p><img src="/images/Ego/image12.jpg" width="60%" height="60%" /></p><h2 id="设置飞控"><a href="#设置飞控" class="headerlink" title="设置飞控"></a>设置飞控</h2><p><img src="/images/Ego/image51.png" width="30%" height="30%" /></p><h2 id="验证自主飞行"><a href="#验证自主飞行" class="headerlink" title="验证自主飞行"></a>验证自主飞行</h2><div style="display: flex; justify-content: center;">    <img src="/images/Ego/image52.png" width="300"/>    <img src="/images/Ego/image53.png" width="300"/></div><p><img src="/images/Ego/image88.png" width="100%" height="100%" /></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="论文项目调研"><a href="#论文项目调研" class="headerlink" title="论文项目调研"></a>论文项目调研</h2><p>调查无GPS-无人机自主飞行相关论文和项目,最终落脚在浙大高飞老师FAST-Lab团队的文章<a href="https://github.com/ZJU-FAST-Lab/Fast-Drone-250">EGO-Planner</a>: 一种基于梯度的四旋翼无人机ESDF的局部规划器。对比传统的轨迹梯度优化的能大大压缩实时运算时间：<br>传统：先建立ESDF地图，再利用ESDF地图中的梯度信息优化轨迹；<br>Ego-Planner方法：只计算局部轨迹区域的ESDF地图的梯度信息。</p><p><img src="/images/Ego/image42.png" width="50%" height="50%" /></p><h2 id="Ego-Planner的Pipline：曲线优化问题"><a href="#Ego-Planner的Pipline：曲线优化问题" class="headerlink" title="Ego-Planner的Pipline：曲线优化问题"></a>Ego-Planner的Pipline：曲线优化问题</h2><ol><li>深度相机数据和IMU数据转换为三维点云，构建OctoMap+OSDFMap</li><li><p>不考虑障碍物，直接得到一条比较光滑的从起点到目标点的B样条曲线的初值</p> <div style="display: flex; justify-content: center;">     <img src="/images/Ego/image40.png" width="300"/>     <img src="/images/Ego/image42.png" width="300"/> </div></li><li><p>用均匀B样条做轨迹优化，实时求解局部OSDF的梯度</p></li><li><p>最小二乘计算出时间分配合理的新控制点初值</p> <div style="display: flex; justify-content: center;">     <img src="/images/Ego/image41.png" width="300"/>     <img src="/images/Ego/image44.png" width="300"/> </div></li><li>针对平滑+碰撞+动力学可行性，进行轨迹的梯度优化</li><li>B样条曲线和控制点的示意图 <div style="display: flex; justify-content: center;">     <img src="/images/Ego/image39.png" width="260"/>     <img src="/images/Ego/image43.png" width="340"/> </div></li></ol><h2 id="仿真验证和学习"><a href="#仿真验证和学习" class="headerlink" title="仿真验证和学习"></a>仿真验证和学习</h2><p><strong>基于Ubuntu-ROS-Prometheus的单机路径规划</strong></p><p>运行ROS必备启动的roscore，脚本依次运行了四个launch文件<br><img src="/images/Ego/image45.png" width="100%" height="100%" /></p><ol><li>启动gazebo仿真环境，带有仿真D435i的无人机模型</li><li><p>启动UAV1控制节点，在Prometheus下控制，为后面路径规划发送控制指令做准备</p> <div style="display: flex; justify-content: center;">     <img src="/images/Ego/image46.png" width="300"/>     <img src="/images/Ego/image47.png" width="380"/> </div></li><li><p>启动octomap建图服务，为后面ego规划做准备</p></li><li>启动ego_planner 仿真，并由B样条生成轨迹，发送控制指令给无人机，控制飞行 <div style="display: flex; justify-content: center;">     <img src="/images/Ego/image48.png" width="300"/>     <img src="/images/Ego/image49.png" width="300"/> </div></li></ol><h2 id="无人机硬件组装"><a href="#无人机硬件组装" class="headerlink" title="无人机硬件组装"></a>无人机硬件组装</h2><p>主导对整个无人机全流程的焊接组装：<strong>视觉传感器-机载电脑-飞控-电调电机-供电五层结构。</strong></p><p>焊接发生在 定制底座的外表供电点焊锡，蓄电池的供电端子，飞控的稳压模块，机载电脑的与定制底板供电连接。</p><p><img src="/images/Ego/image12.jpg" width="60%" height="60%" /></p><h2 id="设置飞控"><a href="#设置飞控" class="headerlink" title="设置飞控"></a>设置飞控</h2><p>基于<strong>QGroundControl</strong>，主导完成定制版本无人机飞控的参数设置。飞控的调试，在年前能完成遥控无人机进行正确的电机无螺旋桨转动。</p><p>飞控是PX4 Pixhaw 6C，与Ego-Planner项目中实际的飞控并不相同，花费了一定的时间在设置遥控器和飞控上，这是依靠Ego-Planner程序自主飞行的基础。需要检查遥控器、飞控、连接正常，电调、电机，飞控正常供电。烧录正确版本的PX4 固件，正确设置根目录的IMU频率，设置各通道对应的模式，设置飞机机型，设置电机协议，设置波特率，优化飞控响应性能。</p><p><img src="/images/Ego/image51.png" width="60%" height="60%" /></p><h2 id="验证自主飞行"><a href="#验证自主飞行" class="headerlink" title="验证自主飞行"></a>验证自主飞行</h2><p><strong>主导完成Ego-Planner代码框架中参数的设置</strong>：比如膨胀系数，油门百分比，相机内参等参数<br>VINS的外参标定设置:只有在确定深度相机和飞控的刚体的平移旋转关系之后，才能外参矩阵</p><div style="display: flex; justify-content: center;">    <img src="/images/Ego/image52.png" width="300"/>    <img src="/images/Ego/image53.png" width="300"/></div><p><strong>主导在创新工场进行Ego-Planner自主飞行测试</strong>，以及demo测试。如下是自主飞行过程对应的OSDF地图分析：</p><p><img src="/images/Ego/image88.png" width="100%" height="100%" /></p><h2 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h2><iframewidth="800"height="450"src='/images/Ego/m1.mp4'frameborder="0"allowfullscreen></iframe>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;论文项目调研&quot;&gt;&lt;a href=&quot;#论文项目调研&quot; class=&quot;headerlink&quot; title=&quot;论文项目调研&quot;&gt;&lt;/a&gt;论文项目调研&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/Ego/image42.png&quot; width=&quot;50%&quot; height=</summary>
+    <summary type="html">&lt;h2 id=&quot;论文项目调研&quot;&gt;&lt;a href=&quot;#论文项目调研&quot; class=&quot;headerlink&quot; title=&quot;论文项目调研&quot;&gt;&lt;/a&gt;论文项目调研&lt;/h2&gt;&lt;p&gt;调查无GPS-无人机自主飞行相关论文和项目,最终落脚在浙大高飞老师FAST-Lab团队的文章&lt;a href=</summary>
       
     
     
@@ -36,7 +127,59 @@
     <category term="其它" scheme="http://example.com/categories/%E5%85%B6%E5%AE%83/"/>
     
     
-    <category term="UAV" scheme="http://example.com/tags/UAV/"/>
+    <category term="Ego-Planner" scheme="http://example.com/tags/Ego-Planner/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>news</title>
+    <link href="http://example.com/2025/04/24/news/"/>
+    <id>http://example.com/2025/04/24/news/</id>
+    <published>2025-04-24T06:31:24.000Z</published>
+    <updated>2025-05-27T06:37:42.106Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>2025.4.24</p></blockquote><p>VS Code 版本 1.99（从2025 年 3 月）开始，VS Code 分发的预构建服务器仅与基于 glibc 2.28 或更高版本的 Linux 发行版兼容。</p><p>连接远程主机可能出现不满足运行vs code服务器的先决条件的报错， 原因最可能是VS Code 更新过快，而远程主机环境未能及时适配新版本。</p><p><strong>最快解决方案</strong>：降级 VS Code 客户端版本，将本地 VS Code 版本降级到 v1.85。</p><p><strong>问题</strong>：本地的vscode copilot低版本不适配，待解决。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;2025.4.24&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;VS Code 版本 1.99（从2025 年 3 月）开始，VS Code 分发的预构建服务器仅与基于 glibc 2.28 或更高版本的 Linux 发行版兼容。&lt;/p&gt;
+&lt;p&gt;连接</summary>
+      
+    
+    
+    
+    <category term="其它" scheme="http://example.com/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="news" scheme="http://example.com/tags/news/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于BERT/ERNIE微调和中文句法语义分析框架的问题匹配</title>
+    <link href="http://example.com/2024/12/20/%E5%9F%BA%E4%BA%8EBERT-ERNIE%E5%BE%AE%E8%B0%83%E5%92%8C%E4%B8%AD%E6%96%87%E5%8F%A5%E6%B3%95%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6%E7%9A%84%E9%97%AE%E9%A2%98%E5%8C%B9%E9%85%8D/"/>
+    <id>http://example.com/2024/12/20/%E5%9F%BA%E4%BA%8EBERT-ERNIE%E5%BE%AE%E8%B0%83%E5%92%8C%E4%B8%AD%E6%96%87%E5%8F%A5%E6%B3%95%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6%E7%9A%84%E9%97%AE%E9%A2%98%E5%8C%B9%E9%85%8D/</id>
+    <published>2024-12-20T08:11:16.000Z</published>
+    <updated>2025-05-27T08:34:55.405Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>问题匹配（Question Matching）任务旨在判断两个自然问句之间的语义是否等价，是自然语言处理领域的一个重要研究方向。问题匹配同时也具有很高的商业价值，在信息检索、智能客服等领域发挥着重要作用。<br>近年来，虽然基于深度神经网络的模型已经在一些问题匹配评测集上取得了与人类相仿甚至超越人类的效果，但在处理真实应用场景中的问题时仍面临鲁棒性不足等问题。当存在微小的字面变化时，模型将无法做出正确判断（如下图），在影响产品体验的同时也会造成相应的经济损失。</p><p>当前大多数工作采用单一的指标在与训练集同分布的测试集上评测模型的好坏。这种评测方式可能过高的估计了模型能力，并且缺乏对模型鲁棒性的细粒度评估。本次评测关注问题匹配模型在真实应用场景中的鲁棒性，从词汇理解、句法结构、错别字、口语化、对话理解五个维度检测模型的鲁棒性，推动语义匹配技术的发展。本次竞赛采用的数据集来自于千言开源数据集项目，包括了哈尔滨工业大学（深圳）的LCQMC和BQ数据集、OPPO的小布对话短文本数据集以及百度的DuQM数据集，期望从多维度、多领域出发，全面评价模型的鲁棒性，进一步提升问题匹配技术的研究水平。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="已有方案"><a href="#已有方案" class="headerlink" title="已有方案"></a>已有方案</h3><p><a href="https://www.bytezonex.com/archives/dXa6Y20W.html">question matching有哪些方法</a>（单塔、双塔）Pointwise，DSSM，sentence BERT</p><h3 id="为什么用BERT"><a href="#为什么用BERT" class="headerlink" title="为什么用BERT"></a>为什么用BERT</h3><p>为什么用bert（架构和预训练任务，<a href="https://developer.volcengine.com/articles/7387287908556505099">中文bert</a>，微调容易100M参数）</p><h3 id="我们的方案：基于BERT-ERNIE微调-中文句法语义分析"><a href="#我们的方案：基于BERT-ERNIE微调-中文句法语义分析" class="headerlink" title="我们的方案：基于BERT/ERNIE微调+中文句法语义分析"></a>我们的方案：基于BERT/ERNIE微调+中文句法语义分析</h3><p>主导解决问题匹配在词汇理解、句法结构、错别字、口语化等维度的鲁棒性。</p><h4 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h4><p><strong>在飞桨AIStudio，对LCQMC、BQCorpus和OPPO小布对话短文本数据集进行无关词语去除、文本规范化的数据预处理，</strong></p><p>1数据预处理：（数据清洗后按照8:2, 总共35w+17w（oppo）两类数据集，1：1标签，50字以内，打乱顺序重新划分， batchsize=150/128，训练集42w，2800 iteration，eval step=400，截断长度100token， 5e-6学习率，GPU paddle AI Lab免费版</p><p>将省市区统一简称，</p><p>特有名词（大学、银行，节假日，品牌，快递，航空公司，五险一金社保）的简写，</p><p>垂类场景针对数据集语音助手OPPO手机型号，</p><p>错别字的纠正匹配oppo、0：</p><p>阿拉伯数字转为中文，数学算术式的中文表述</p><p>无意义词过滤，（呼唤语音助手、请问句、求解释、求帮忙，说说，告诉，语气词）</p><p>标点符号去除</p><h4 id="BERT-ERNIE-微调"><a href="#BERT-ERNIE-微调" class="headerlink" title="BERT/ERNIE 微调"></a>BERT/ERNIE 微调</h4><p><strong>结合R-Drop策略微调paddlenlp的ernie-gram-zh和bert-wwm-ext-chinese单塔模型，在百度DuQM和OPPO小布对话短文本上问题匹配正确率达到81.7%；</strong></p><p>2bert微调（数据清洗+early stop+r-drop）(注意bert输入格式input id，token type ，position ids，attention mask，五种special token 【cls，sep，pad，mask，unk】，返回值形式)</p><h4 id="中文句法语义分析的校正"><a href="#中文句法语义分析的校正" class="headerlink" title="中文句法语义分析的校正"></a>中文句法语义分析的校正</h4><p><strong>针对中文问题匹配建立拼音拼写、句法结构和词法语义的分析框架，校正口语化、错别字、句法结构不同的文本，正确率提升7.5%；</strong></p><p>库（pypinyin，pycorrector，KenLM）</p><h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>最终在测试集正确率达到89.2%。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;赛题背景&quot;&gt;&lt;a href=&quot;#赛题背景&quot; class=&quot;headerlink&quot; title=&quot;赛题背景&quot;&gt;&lt;/a&gt;赛题背景&lt;/h2&gt;&lt;p&gt;问题匹配（Question Matching）任务旨在判断两个自然问句之间的语义是否等价，是自然语言处理领域的一个重要研究方</summary>
+      
+    
+    
+    
+    <category term="NLP" scheme="http://example.com/categories/NLP/"/>
+    
+    
+    <category term="NLP" scheme="http://example.com/tags/NLP/"/>
     
   </entry>
   
@@ -117,6 +260,30 @@
   </entry>
   
   <entry>
+    <title>上机IO总结</title>
+    <link href="http://example.com/2024/06/27/%E4%B8%8A%E6%9C%BAIO%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2024/06/27/%E4%B8%8A%E6%9C%BAIO%E6%80%BB%E7%BB%93/</id>
+    <published>2024-06-27T04:43:07.000Z</published>
+    <updated>2025-05-27T08:26:16.167Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="/images/IOpdf/bfs与dfs详解知乎.pdf">bfs与dfs详解知乎.pdf</a><br><a href="/images/IOpdf/CPlusauto关键字CSDN博客.pdf">CPlusauto关键字CSDN博客.pdf</a><br><a href="/images/IOpdf/CPlus实现二叉树深度优先搜索广度优先搜索CSDN博客.pdf">CPlus实现二叉树深度优先搜索广度优先搜索CSDN博客.pdf</a><br><a href="/images/IOpdf/CPlus标准库_cmath菜鸟教程.pdf">CPlus标准库_cmath菜鸟教程.pdf</a><br><a href="/images/IOpdf/CPlus标准库_菜鸟教程.pdf">CPlus标准库_菜鸟教程.pdf</a><br><a href="/images/IOpdf/cplus类的对象作为方法参数类作为参数传递-CSDN博客.pdf">cplus类的对象作为方法参数类作为参数传递-CSDN博客.pdf</a><br><a href="/images/IOpdf/CppSTL之map详解CSDN博客.pdf">CppSTL之map详解CSDN博客.pdf</a><br><a href="/images/IOpdf/Cpp内存管理库new菜鸟教程.pdf">Cpp内存管理库new菜鸟教程.pdf</a><br><a href="/images/IOpdf/Cpp容器类 deque菜鸟教程.pdf">Cpp容器类 deque菜鸟教程.pdf</a><br><a href="/images/IOpdf/Cpp容器类 map菜鸟教程.pdf">Cpp容器类 map菜鸟教程.pdf</a><br><a href="/images/IOpdf/Cpp容器类queue菜鸟教程.pdf">Cpp容器类queue菜鸟教程.pdf</a><br><a href="/images/IOpdf/Cpp容器类stack菜鸟教程.pdf">Cpp容器类stack菜鸟教程.pdf</a><br><a href="/images/IOpdf/Cpp容器类unordered_map菜鸟教程.pdf">Cpp容器类unordered_map菜鸟教程.pdf</a><br><a href="/images/IOpdf/Cpp容器类vector菜鸟教程.pdf">Cpp容器类vector菜鸟教程.pdf</a><br><a href="/images/IOpdf/Cpp数据结构菜鸟教程.pdf">Cpp数据结构菜鸟教程.pdf</a><br><a href="/images/IOpdf/Cpp标准库string菜鸟教程.pdf">Cpp标准库string菜鸟教程.pdf</a><br><a href="/images/IOpdf/Cpp栈的应用逆波兰式的实现CSDN博客.pdf">Cpp栈的应用逆波兰式的实现CSDN博客.pdf</a><br><a href="/images/IOpdf/Cpp算法库algorithm菜鸟教程.pdf">Cpp算法库algorithm菜鸟教程.pdf</a><br><a href="/images/IOpdf/cpp类.pdf">cpp类.pdf</a><br><a href="/images/IOpdf/CpulsSTL教程菜鸟教程.pdf">CpulsSTL教程菜鸟教程.pdf</a><br><a href="/images/IOpdf/C_Cpp万能头文件Dotcpp编程社区.pdf">C_Cpp万能头文件Dotcpp编程社区.pdf</a><br><a href="/images/IOpdf/C容器类list菜鸟教程.pdf">C容器类list菜鸟教程.pdf</a><br><a href="/images/IOpdf/C语言CPlus常用头文件总结适用于程序设计竞赛CSDN博客.pdf">C语言CPlus常用头文件总结适用于程序设计竞赛CSDN博客.pdf</a><br><a href="/images/IOpdf/C语言文件操作含详细步骤CSDN博客.pdf">C语言文件操作含详细步骤CSDN博客.pdf</a><br><a href="/images/IOpdf/C语言的基本输入与输出函数全解CSDN博客.pdf">C语言的基本输入与输出函数全解CSDN博客.pdf</a><br><a href="/images/IOpdf/struct.pdf">struct.pdf</a><br><a href="/images/IOpdf/struct初始化.pdf">struct初始化.pdf</a><br><a href="/images/IOpdf/vector.pdf">vector.pdf</a><br><a href="/images/IOpdf/一文看懂哈希表并学会使用CPlusSTL 中的哈希表_哈希表有哪些函数_CSDN博客.pdf">一文看懂哈希表并学会使用CPlusSTL 中的哈希表_哈希表有哪些函数_CSDN博客.pdf</a><br><a href="/images/IOpdf/二叉树中的最大路径和力扣.pdf">二叉树中的最大路径和力扣.pdf</a><br><a href="/images/IOpdf/二叉树深度.jpg">二叉树深度.jpg</a><br><a href="/images/IOpdf/二叉树的层平均值.pdf">二叉树的层平均值.pdf</a><br><a href="/images/IOpdf/二叉树的最近公共祖先力扣.pdf">二叉树的最近公共祖先力扣.pdf</a><br><a href="/images/IOpdf/从前序与中序遍历序列构造二叉树.pdf">从前序与中序遍历序列构造二叉树.pdf</a><br><a href="/images/IOpdf/关于gets_scanf_gets读取回车CSDN博客.pdf">关于gets_scanf_gets读取回车CSDN博客.pdf</a><br><a href="/images/IOpdf/图CPlus实现CSDN博客2.pdf">图CPlus实现CSDN博客2.pdf</a><br><a href="/images/IOpdf/图CPlus实现_c实现图CSDN博客.pdf">图CPlus实现_c实现图CSDN博客.pdf</a><br><a href="/images/IOpdf/图的存储结构邻接矩阵与邻接表及其CPlus实现博客园.pdf">图的存储结构(邻接矩阵与邻接表)及其CPlus实现博客园.pdf</a><br><a href="/images/IOpdf/数据结构CPlus二叉树的遍历_递归和非递归及一些简单操作CSDN博客.pdf">数据结构CPlus二叉树的遍历_递归和非递归及一些简单操作CSDN博客.pdf</a><br><a href="/images/IOpdf/数据结构二叉搜索树详解CSDN博客.pdf">数据结构二叉搜索树详解CSDN博客.pdf</a><br><a href="/images/IOpdf/算法之动态规划总结11种dp算法CSDN博客.pdf">算法之动态规划总结11种dp算法CSDN博客.pdf</a><br><a href="/images/IOpdf/类初始化.pdf">类初始化.pdf</a></p><blockquote><p>reference</p></blockquote><p> 菜鸟教程 <a href="https://www.runoob.com/">https://www.runoob.com/</a><br> AI算法工程师手册(华校专) <a href="https://www.huaxiaozhuan.com/">https://www.huaxiaozhuan.com/</a><br> 代码随想录 <a href="https://www.programmercarl.com/">https://www.programmercarl.com/</a><br> CS自学指南 <a href="https://csdiy.wiki/">https://csdiy.wiki/</a><br> 上交生存手册 <a href="https://survivesjtu.gitbook.io/survivesjtumanual">https://survivesjtu.gitbook.io/survivesjtumanual</a><br> THU手册 <a href="https://yourschool.cc/thubook/">https://yourschool.cc/thubook/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;/images/IOpdf/bfs与dfs详解知乎.pdf&quot;&gt;bfs与dfs详解知乎.pdf&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;/images/IOpdf/CPlusauto关键字CSDN博客.pdf&quot;&gt;CPlusauto关键字CSDN博客.pdf&lt;/a&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="其它" scheme="http://example.com/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="C++" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Multi-agent DRL</title>
     <link href="http://example.com/2024/06/27/Multi-agent%20DRL/"/>
     <id>http://example.com/2024/06/27/Multi-agent%20DRL/</id>
@@ -169,6 +336,54 @@
   </entry>
   
   <entry>
+    <title>一种动作捕捉系统下的单目相机内参标定方法</title>
+    <link href="http://example.com/2023/12/27/%E4%B8%80%E7%A7%8D%E5%8A%A8%E4%BD%9C%E6%8D%95%E6%8D%89%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E5%8D%95%E7%9B%AE%E7%9B%B8%E6%9C%BA%E5%86%85%E5%8F%82%E6%A0%87%E5%AE%9A%E6%96%B9%E6%B3%95/"/>
+    <id>http://example.com/2023/12/27/%E4%B8%80%E7%A7%8D%E5%8A%A8%E4%BD%9C%E6%8D%95%E6%8D%89%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E5%8D%95%E7%9B%AE%E7%9B%B8%E6%9C%BA%E5%86%85%E5%8F%82%E6%A0%87%E5%AE%9A%E6%96%B9%E6%B3%95/</id>
+    <published>2023-12-27T06:48:52.000Z</published>
+    <updated>2025-05-27T08:14:28.767Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="相机内参标定"><a href="#相机内参标定" class="headerlink" title="相机内参标定"></a>相机内参标定</h2><p>相机内参标定即获取相机自身参数的过程，一般包含焦距、主点坐标以及畸变参数，这些参数决定了相机的投影中心。相机内参标定是计算机视觉领域的基础，是视觉定位、目标识别等领域的关键技术之一。</p><p>目前为止在工业界应用最为广泛的相机内参标定方法为棋盘格标定法。棋盘格标定法通过拍摄带有规则方格图案的棋盘格，并利用这些方格的几何特征来计算相机的内参。该方法通常需要从多个角度拍摄棋盘格，以确保摄像头能够捕捉到足够多的信息来求解内参。棋盘格标定法简单易行，计算精度较高，因此得到了广泛应用。</p><p>动作捕捉系统因其精准的空间定位能力，广泛应用于影视制作、虚拟现实等领域。通过在动作捕捉系统中创建相机刚体，可以准确获取相机的位置和姿态，这在运动分析和三维重建中非常有用。然而，传统的标定方法，如棋盘格标定法等，不适用于动作捕捉系统中的相机刚体的内参标定。因为在动作捕捉系统中，相机的刚体中心与相机的投影中心不重合，导致无法正确获取相机刚体的内部参数。</p><h2 id="现有技术的问题"><a href="#现有技术的问题" class="headerlink" title="现有技术的问题"></a>现有技术的问题</h2><figure style="text-align: center;">  <img src="/images/标定附图/p1.jpg" width="90%" height="90%"  />  <figcaption>1 动作捕捉系统示意图</figcaption></figure><p>目前的棋盘格标定方法在动作捕捉系统中的应用存在明显局限性。这是因为在动作捕捉系统中，相机的刚体中心与相机的光心不重合，导致传统方法无法准确获取相机的内部参数。这种不准确性直接影响了后续图像处理和三维重建任务的效果和效率。</p><p>具体来说，使用传统棋盘格标定方法在动作捕捉系统中进行内参标定时，必须设计额外的机械结构以尽可能使相机刚体中心与光心重合。这样的设计不仅增加了系统的复杂性和成本，还可能引入更多的误差和不稳定因素，影响标定结果的可靠性。</p><p>本文旨在解决上述技术问题，提出了一种针对动作捕捉系统的相机刚体内参标定方法。该方法能够准确获取动作捕捉场景下相机刚体的内参，无需额外的机械结构设计，从而简化系统架构，降低成本，并提升标定精度。通过本文的方法，能够显著提高图像处理和三维重建任务的准确性和效率，从而提升整个动作捕捉系统的性能和稳定性。</p><h2 id="技术方法的详细阐述"><a href="#技术方法的详细阐述" class="headerlink" title="技术方法的详细阐述"></a>技术方法的详细阐述</h2><p>本文专注于如何在动作捕捉系统下实现刚体相机的内参标定任务，这是在动捕系统下实现三维重建、虚拟现实等关键应用的重要基础。</p><p>动作捕捉系统（Motion Capture System）是一种广泛用于记录和分析人体或其他物体动态运动信息的装置。最常用的为光学动作捕捉，使用多个摄像机围绕捕捉区域，以捕获空间内反光标记球的动作。这些标记反射摄像机发出的光线，从而创建出动作的三维数据。借助动捕系统可以很方便的获取空间内任何一个标记点在世界坐标系下的三维位置信息，也能够根据多个标记点创建刚体并获取刚体的六个自由度的位置姿态信息。在本实例所使用的动捕系统如图1所示。</p><p>相机内参是指与相机的光学特性相关的参数，包括焦距、主点坐标、畸变系数等，其中焦距描述的是相机光学中心和成像平面的距离，主点坐标指的是成像平面上，光轴与该平面交点的位置。相机外参是指相机在世界坐标系统中的方向和位置，通常方向用旋转矩阵表示，而位置使用三维坐标来定位。这些参数对于精确的图像处理和三维重建至关重要。在动作捕捉系统中，通过创建相机刚体，可以实时获取相机刚体中心的位置以及相对于捕捉空间的姿态,进而同步更新外参。这种方法允许在动态环境中维持高度的精度和响应速度，从而提高整个系统的效率和效果。</p><p>相机成像是指将3D空间中的点投射到二维图像平面上的过程。这一过程涉及复杂的几何和数学变换，并需要提供精确的相机的内参以及外参。为了更加清楚的说明该过程，以及传统方法在动作捕捉系统下的劣势，下面本文将通过图2(a)来进行说明。</p><figure style="text-align: center;"><div style="display: flex; justify-content: center;">         <img src="/images/标定附图/p2a.jpg" width="90%" height="90%" />        <img src="/images/标定附图/p2b.jpg" width="90%" height="90%" />    </div>  <figcaption>2 动捕系统下的相机成像模型</figcaption></figure><p>图2(a)所示为经典的小孔成像模型，在不考虑畸变的情况下，给定一个世界坐标系下的点 $P(X,Y,Z)$，其在像素坐标系下的坐标的$p(u,v,1)$ 推导如公式$\eqref{1}$所示。</p><script type="math/tex; mode=display">\left\{\begin{array}{ccc}p=K(RP+t) \\K=\begin{pmatrix}f_x & 0 & c_x & 0 \\0 & f_y & c_y & 0 \\0 & 0 & 1 & 0\end{pmatrix} \\R|t=\begin{pmatrix}R_{11} & R_{12} & R_{13} & t_x \\R_{21} & R_{22} & R_{23} & t_y \\R_{31} & R_{32} & R_{33} & t_z \\0 & 0 & 0 & 1\end{pmatrix}\end{array}\right. \tag{1}\label{1}</script><p>空间点$P(X,Y,Z)$ 首先通过相机的外参得到相机坐标系下点 $P_c(X_c,Y_c,Z_c,1)$的坐标$P_c=RP+t$ ，随后通过比例因子$Z_c$得到归一化平面下的 的坐标，最后通过相机内参得到像素坐标系下 $P_{c}{}^{\prime}\left({\frac{X_{c}}{Z_{c}}},{\frac{Y_{c}}{Z_{c}}},1,{\frac{1}{Z_{c}}}\right)$的坐标 $p=KP_c’$。</p><p>其中， $R|t$描述了相机的外参，$K$ 代表相机的内参, $Z_c$为相机坐标系下点$p(u,v,1)$ 在相机坐标系下的$Z$ 方向坐标值。 </p><p>在传统的棋盘格标定法中，通常假设相机的光学中心与相机坐标系的原点重合，且相机坐标系的Z轴与光轴一致。然而，在动作捕捉系统中，这样的假设难以满足,如图2(b)所示。在动作捕捉系统中，相机的刚体位姿是与刚体中心绑定的。若直接将这一位姿用作变换矩阵 ，则经过变换后的相机坐标系中心将与相机刚体中心重合。如果相机刚体中心与相机的光学中心不一致，这种处理方式将导致投影错误，如图2(a)中 $p_1$和 $p_2$存在的投影偏差所示。</p><p>针对这个问题，往往可以通过将标记点放到相机的特定位置，从结构上保证相机上的标记点所构成的刚体与相机光学中心大致重合，但是这种方式需要额外的机械结构设计，并且可能导致相机操作复杂化，增加系统的重量和成本。此外，即使通过精心设计，标记点与光学中心的对齐也难以达到完全精确，仍可能引入小的误差，影响最终的标定精度。</p><p>相比之下，本文提供了一种更加简便和高效的内参标定方法，能够在不增加额外机械结构的情况下，准确地获取相机的内参。该方法基于动作捕捉系统提供的高精度位姿数据，结合数学优化算法实现相机参数的精确标定。下面将详细展开说明。<br>相机刚体创建：具体来说，在动捕系统下相机刚体可以通过在相机上粘贴一定数量的标定点，并配合特定动捕软件操作来实现。示例性的，本文在图3(a)提供了一种相机刚体模型，该示例采用的是一种常见的RGBD相机，并粘贴了4个标定点。图3(b)展示了其在动捕中的刚体示意图。</p><p>标定模板设计：本文提供了一种适用于动作捕捉系统的标定模板设计方法。附图4展示了一种本文采用的标定模板，具体来说，对于一个$(w,h)$ 的标定版，需要在标定板二维平面中的 $m_1(0,0)$、$m_2(w,0)$ 、$m_3(0,h)$ 、$m_4(w,h)$ 四个位置粘贴标定点，并且需要测量其中一个标定点的距离标定版的距离 $d$，单位为m。</p><p>借助动捕系统可以获得上述四个标定点在动捕坐标系下的位置$M_1$ ，$M_2$ ，$M_3$ ，$M_4$ ，进而可以根据公式$\eqref{2}$获得标定板中任意一点 $P_{ij}$在动捕下的位置 。</p><script type="math/tex; mode=display">\left.\left\{\begin{array}{l}\mathbf{h}=\frac{M_2-M_1}{w-1} \\\mathbf{v}=\frac{M_3-M_1}{h-1} \\P_{ij}=M_1+i\cdot\mathbf{v}+j\cdot\mathbf{h}\end{array}\right.\right.\tag{2} \label{2}</script><p>其中$w$ 和 $h$分别为标定板在水平方向与垂直方向上的点数。$\bf{v}$ 和$\bf{h}$ 分别为标定板在水平方向和垂直方向的单位向量。</p><p>标定点检测：在相机视野范围内放置标定板，并通过相机拍摄模板图像，使用图像处理算法库OpenCV检测图像中的棋盘格角点，并记录其像素坐标。</p><p>几何关系建立：本文采用带畸变的小孔成像模型来建立空间点到图像像素点之间的几何映射关系。在公式$\eqref{1}$的基础上，引入畸变参数 $k_1,k_2,p_1,p_2$，最终的像素坐标系下的角点计算公式如式$\eqref{3}$所示。</p><script type="math/tex; mode=display">\begin{cases}p_{ij}=K\left(RP_{ij}+t\right)\left(1+k_1r^2+k_2r^4\right)+\binom{2p_1xy+p_2\left(r^2+2x^2\right)}{p_1\left(r^2+2y^2\right)+2p_2xy} \\P_{ij}=M+i\mathbf{v}+j\mathbf{h} & \end{cases} \tag{3} \label{3}</script><p>其中，$p_{ij}$ 是棋盘格角点坐标， $P_{ij}$为式$\eqref{2}$计算出的对应角点在世界坐标系的坐标,$r$ 为像素点到图像中心的距离，$(x,y,1)$ 为归一化平面下的坐标， $R|t$为动捕坐标系下相机刚体的位姿，$K$ 为待优化内参。</p><p>优化算法应用：本文中使用梯度下降法来优化相机的内参，通过最小化目标函数来找到最佳的参数值。根据初始估计值设定相机内参$K$ 和畸变参数$p_1,p_2,k_1,k_2$ ，其中内参 的初值可以通过奇异值分解获得，畸变参数的初值指定为1e-4。<br>目标函数的定义如式$\eqref{4}$所示，</p><script type="math/tex; mode=display">E(K,k_1,k_2,p_1,p_2)=\sum_n\sum_{ij}||p_{ij}-\hat{p}_{ij}(K,k_1,k_2,p_1,p_2)||^2\tag{4} \label{4}</script><p>其中 $n$代表有效图像的数量。 $p_{i,j}$是图像中检测到的第 $i$行 $j$列的角点的像素坐标,$\hat{p}_{ij}$ 是通过式$\eqref{3}$计算出来的投影坐标。</p><p>目标函数对参数$K,p_1,p_2,k_1,k_2$ 的梯度计算以及参数更新过程如公式$\eqref{5}$所示:</p><script type="math/tex; mode=display">\begin{gathered}K\leftarrow K-\eta\frac{\partial E}{\partial K} \\\mathrm{.}k_{1}\leftarrow k_{1}-\eta\frac{\partial E}{\partial k_{1}} \\\mathrm{k}_{2}\leftarrow k_{2}-\eta\frac{\partial E}{\partial k_{2}} \\p_{1}\leftarrow p_{1}-\eta\frac{\partial E}{\partial p_{1}} \\p_{2}\leftarrow p_{2}-\eta\frac{\partial E}{\partial p_{2}}\end{gathered} \tag{5} \label{5}</script><p>其中，$\eta$ 为学习率，表示每次更新的步长，在本文中所有参数采用同样的学习率，在实际应用中可以设置不同的学习率。重复梯度计算和参数更新，直到目标函数的值收敛到预设的阈值，或者达到最大迭代次数。</p><p>通过上述方法，可以在不增加额外机械结构的情况下，利用动作捕捉系统提供的高精度位姿数据，结合数学优化算法，实现相机参数的精确标定。</p><figure style="text-align: center;"><img src="/images/标定附图/p3a.jpg" width="90%" height="90%" />  <figcaption>3 相机装置的示意图</figcaption></figure><figure style="text-align: center;">    <div style="display: flex; justify-content: center;">         <img src="/images/标定附图/p3b.jpg" width="85%" height="85%" />        <img src="/images/标定附图/p4.jpg" width="85%" height="85%" />    </div>  <figcaption>4 棋盘格装置以及角点示意图</figcaption></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;相机内参标定&quot;&gt;&lt;a href=&quot;#相机内参标定&quot; class=&quot;headerlink&quot; title=&quot;相机内参标定&quot;&gt;&lt;/a&gt;相机内参标定&lt;/h2&gt;&lt;p&gt;相机内参标定即获取相机自身参数的过程，一般包含焦距、主点坐标以及畸变参数，这些参数决定了相机的投影中心。相机</summary>
+      
+    
+    
+    
+    <category term="其它" scheme="http://example.com/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="相机标定" scheme="http://example.com/tags/%E7%9B%B8%E6%9C%BA%E6%A0%87%E5%AE%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于python的即时通讯软件开发</title>
+    <link href="http://example.com/2023/08/27/%E5%9F%BA%E4%BA%8Epython%E7%9A%84%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    <id>http://example.com/2023/08/27/%E5%9F%BA%E4%BA%8Epython%E7%9A%84%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</id>
+    <published>2023-08-27T03:28:31.000Z</published>
+    <updated>2025-05-27T04:38:58.076Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h3><p>项目目的：我们的项目旨在构建一款名为<a href="https://github.com/TT2TER/Echoplex">Echoplex的实时聊天软件</a>:</p><p><strong>项目意义：</strong></p><ol><li>学习机会： 通过此项目，可以深入了解Python Socket编程和Qt框架，提高编程技能。</li><li>自定义功能： 可以根据用户的需求添加自定义功能，如文件传输、群聊、语音通话等。</li></ol><p><strong>参考资料：</strong></p><ol><li>Python Socket编程文档：<a href="https://docs.python.org/3/library/socket.html">https://docs.python.org/3/library/socket.html</a></li><li>Qt框架官方文档：<a href="https://doc.qt.io/qt-6.2/index.html">https://doc.qt.io/qt-6.2/index.html</a></li><li>《Python网络编程》（作者：Dr. M. O. Faruque Sarker和Sam Washington）：这本书介绍了Python网络编程的基础知识，包括Socket编程。</li><li>在线编程社区和论坛：如Stack Overflow，Reddit的Python板块等，</li><li>同类项目和开源即时通讯应用的源代码</li></ol><h3 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h3><p><strong>硬件环境： </strong>Linux/Windows/Mac</p><p><strong>软件环境：</strong></p><p>设备需要有摄像头与摄像头驱动<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Python3<span class="number">.8</span></span><br><span class="line">numpy==<span class="number">1.24</span><span class="number">.4</span></span><br><span class="line">openai_whisper==<span class="number">20230314</span></span><br><span class="line">opencv_contrib_python==<span class="number">4.8</span><span class="number">.0</span><span class="number">.76</span></span><br><span class="line">PyAudio==<span class="number">0.2</span><span class="number">.11</span></span><br><span class="line">PyJWT==<span class="number">2.8</span><span class="number">.0</span></span><br><span class="line">PySide2==<span class="number">5.15</span><span class="number">.2</span><span class="number">.1</span></span><br><span class="line">PySide2_Fluent_Widgets==<span class="number">1.1</span><span class="number">.8</span></span><br><span class="line">rsa==<span class="number">4.9</span></span><br></pre></td></tr></table></figure></p><p>有关Pyside和whisper，请参考官方在github上的安装流程<br><a href="https://github.com/zhiyiYo/PyQt-Fluent-Widgets/tree/PySide2">https://github.com/zhiyiYo/PyQt-Fluent-Widgets/tree/PySide2</a><br><a href="https://github.com/openai/whisper">https://github.com/openai/whisper</a><br>由于PyAudio库较为古老，直接pip install可能报错,请尝试<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install portaudio19-dev</span><br><span class="line">sudo apt-get install python3-all-dev</span><br><span class="line">pip install pyaudio</span><br></pre></td></tr></table></figure></p><p>如果为linux系统，需要额外下载<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gtk2.0-dev and pkg-config #以进行视频通话(cv.destroyallwindows的报错)</span><br><span class="line">pip install opencv-python-headless #以解决opencv与pyside的plugin冲突导致的报错</span><br></pre></td></tr></table></figure></p><h2 id="2-需求分析"><a href="#2-需求分析" class="headerlink" title="2 需求分析"></a>2 需求分析</h2><ul><li style="list-style: none"><input type="checkbox" checked></input> 用户注册：允许用户创建新帐户，提供用户名和密码，注册模块负责。</li><li style="list-style: none"><input type="checkbox" checked></input> 用户登录：已注册用户可以使用用户名和密码登录，登录模块负责。</li><li style="list-style: none"><input type="checkbox" checked></input> 私聊功能：允许用户与其他用户一对一聊天，需要发消息模块负责。</li><li style="list-style: none"><input type="checkbox" checked></input> 群聊功能：支持多用户同时在一个聊天群中聊天。</li><li style="list-style: none"><input type="checkbox" checked></input> 好友请求：用户可以向其他用户发送好友请求，需要对方确认，需要好友管理模块负责。</li><li style="list-style: none"><input type="checkbox" checked></input> 创建用户界面：使用Qt框架创建直观的用户界面，包括主窗口、聊天窗口、联系人列表等，需要qt负责。</li><li style="list-style: none"><input type="checkbox" checked></input> 用户登录界面：提供用户友好的登录界面，包括用户名和密码输入字段需要qt和客户端沟通。</li><li style="list-style: none"><input type="checkbox" checked></input> 用户注册界面：创建用户注册界面，包括新用户的注册信息，需要qt负责。</li><li style="list-style: none"><input type="checkbox" checked></input> 主聊天窗口：设计用于发送和接收消息的聊天窗口。</li><li style="list-style: none"><input type="checkbox" checked></input> 联系人列表：显示用户的联系人列表，包括在线状态和最新消息提示，需要登陆时拉取。</li><li style="list-style: none"><input type="checkbox" checked></input> 表情和图片消息：允许用户发送表情符号和图片。</li><li style="list-style: none"><input type="checkbox" checked></input> 文件传输：用户可以发送和接收文件，确保文件传输的可靠性和安全性，需要文件传输模块负责。</li><li style="list-style: none"><input type="checkbox" checked></input> 用户通知：当有新消息或好友请求时，向用户发送通知。</li><li style="list-style: none"><input type="checkbox" checked></input> 跨平台支持：确保即时通讯软件可以在不同操作系统上运行，如Windows、macOS和Linux。</li><li style="list-style: none"><input type="checkbox" checked></input> 数据库支持：将用户数据、消息历史记录等信息存储在数据库中，以实现持久性存储。</li><li style="list-style: none"><input type="checkbox"></input> 人脸验证支持：人脸验证可以作为二步验证，再输入密码后，进行第二次验证。<h2 id="3-概要设计"><a href="#3-概要设计" class="headerlink" title="3 概要设计"></a>3 概要设计</h2></li></ul><h3 id="系统架构："><a href="#系统架构：" class="headerlink" title="系统架构："></a>系统架构：</h3><p>Echoplex即时通讯软件可以采用客户端-服务器-客户端架构，其中客户端负责用户界面和消息发送/接收，服务器负责消息路由和用户管理。这种架构具有良好的可扩展性和性能。</p><h3 id="技术选择"><a href="#技术选择" class="headerlink" title="技术选择"></a>技术选择</h3><p>客户端： 使用Python作为主要编程语言，Qt框架用于用户界面设计。Python的Socket库用于与服务器通信。<br>服务器： 同样使用Python的Socket库实现服务器端。<br>数据存储： 使用SQLite数据库来存储用户数据和消息历史记录。SQLite是一个轻量级的嵌入式数据库，适合小型应用程序。</p><h3 id="通信协议："><a href="#通信协议：" class="headerlink" title="通信协议："></a>通信协议：</h3><p>定义一个简单的通信协议，包括消息格式、命令和状态码。协议应包括以下元素：<br>•    注册和登录： 客户端发送注册和登录请求，服务器验证用户凭据。<br>•    消息格式： 定义文本消息、图片消息和文件传输消息的格式。<br>•    命令： 包括发送消息、接收消息、添加好友、创建群聊等命令。<br>•    状态码： 用于指示请求是否成功，以及错误的类型。</p><h3 id="数据库设计："><a href="#数据库设计：" class="headerlink" title="数据库设计："></a>数据库设计：</h3><p>用户数据表（User）：<br>•    字段：用户ID（唯一标识符）、用户名、密码（加密存储）。<br>•    用户表存储所有注册用户的信息。<br>消息数据表（Message）：<br>•    字段：消息ID（唯一标识符）、发送者ID、接收者ID、消息内容、消息类型（文本、图片、文件）、发送时间等。<br>•    消息表用于存储所有消息的历史记录，包括私聊和群聊。<br>好友关系表（Friendship）：<br>•    字段：用户1 ID、用户2 ID、关系状态。<br>•    好友关系表用于存储用户之间的好友关系，以及好友请求的状态。<br>群聊数据表（GroupChat）：<br>•    字段：群聊ID、群聊名称、创建者ID、成员列表等。<br>•    群聊数据表用于存储群聊的信息，包括成员列表。</p><h3 id="核心功能描述："><a href="#核心功能描述：" class="headerlink" title="核心功能描述："></a>核心功能描述：</h3><p><strong>用户注册和登录：</strong><br>用户可以通过提供用户名和密码注册新账户。<br>已注册用户可以使用用户名和密码登录。<br><strong>用户管理和通信：</strong><br>用户可以添加好友，发送和接收即时消息。<br>用户可以创建和参与群聊，发送群聊消息。<br>实现消息的实时发送和接收，确保低延迟和可靠性。<br><strong>用户界面：</strong><br>使用Qt框架创建用户友好的界面，包括登录和注册界面、主界面、聊天窗口和联系人列表。<br>实现通知机制，通知用户有新消息或好友请求。<br><strong>文件传输：</strong><br>允许用户发送和接收文件，确保文件传输的可靠性和安全性。<br><strong>群聊支持：</strong><br>用户可以创建群聊，邀请好友加入，发送和接收群聊消息。<br><strong>视频通话</strong><br>用户可以和在线用户建立起p2p视频通话。<br><strong>人脸验证</strong><br>人脸验证可以作为二步验证，再输入密码后，进行第二次验证。<br><strong>语音识别</strong><br>基于openai-whisper的语音识别包，可以在聊天窗口直接发语音转文字。</p><h2 id="4-实现方案"><a href="#4-实现方案" class="headerlink" title="4 实现方案"></a>4 实现方案</h2><p>好友管理模块可实现增删好友，拉取好友列表和分组。<br>函数实现和流程图如下。</p><div class="table-container"><table><thead><tr><th>模块</th><th>描述</th><th>备注</th></tr></thead><tbody><tr><td><strong>Client/user_addfriend</strong></td><td>客户端请求加好友</td><td>客户端将加好友请求发送给服务器</td></tr><tr><td><strong>Server/auser/addfriend</strong></td><td>服务器处理加好友请求</td><td>服务端将好友请求转发给对方，若对方不在线，则缓存</td></tr><tr><td><strong>Client/rcv_addfriend</strong><br><strong>Client/ans_addfriend</strong></td><td>客户端处理好友请求</td><td>客户端收取好友请求，并将是否同意返回给服务器</td></tr><tr><td><strong>Sever/ans_addfriend</strong></td><td>服务器处理好友请求回复</td><td>转发好友请求结果，若对方同意，则在数据库存入好友记录</td></tr><tr><td><strong>Client/rcv_ans_addfriend</strong></td><td>客户端收取请求结果</td><td>客户端收取好友请求结果</td></tr><tr><td><strong>Client/del_friend</strong></td><td>客户端请求删除好友</td><td>客户端将删除好友的的请求发给服务器</td></tr><tr><td><strong>Server/del_friend</strong></td><td>服务端处理删除好友请求</td><td>若id存在，则更新好友数据库，否则，报错</td></tr><tr><td><strong>Client/pull_friendlist</strong></td><td>客户端请求拉取好友</td><td>客户端发起拉取好友列表和分组的请求</td></tr><tr><td><strong>Server/pull_friendlist</strong></td><td>服务端处理好友列表拉取请求</td><td>客户端交好友列表及分组信息返回给用户，若无好友则返回空</td></tr></tbody></table></div><p><img src="/images/imessage/image1.png" width="80%" height="80%" /><br><img src="/images/imessage/image2.png" width="80%" height="80%" /></p><p><strong>运行结果图如下</strong></p><p>1.请求添加好友，需要输入好友id</p><p><img src="/images/imessage/image3.jpeg" width="80%" height="80%" /></p><p>2.好友id不存在，则会报错。若好友id存在，则正常发送。<br> <img src="/images/imessage/image4.jpeg" width="80%" height="80%" /></p><p>3.用户若在线，则会直接收到好友请求，并显示未读红点。若用户不在线，则会缓存好友请求，用户上线自动收取好友请求。<br> <img src="/images/imessage/image5.jpeg" width="80%" height="80%" /></p><p>4.用户可以选择接受或者拒绝。若拒绝，则原来用户会显示“对方拒绝您的请求”。若接受则会成为好友。<br> <img src="/images/imessage/image6.png" width="80%" height="80%" /></p><p>5.接受后，对方陈工出现在好友对话窗口中。<br> <img src="/images/imessage/image7.jpeg" width="80%" height="80%" /><br>具体代码如下：</p> <div style="display: flex; justify-content: center;">     <img src="/images/imessage/image8.png"  /><img src="/images/imessage/image9.png"  /></div> <div style="display: flex; justify-content: center;"><img src="/images/imessage/image10.png"  /><img src="/images/imessage/image11.png"  /></div> <div style="display: flex; justify-content: center;"><img src="/images/imessage/image17.png" /><img src="/images/imessage/image13.png"  /></div> <div style="display: flex; justify-content: center;"><img src="/images/imessage/image14.png" /><img src="/images/imessage/image15.png" /></div> <div style="display: flex; justify-content: center;"><img src="/images/imessage/image16.png" /><img src="/images/imessage/image12.png"  /></div><h2 id="5-系统测试"><a href="#5-系统测试" class="headerlink" title="5 系统测试"></a>5 系统测试</h2><div class="table-container"><table><thead><tr><th>测试说明</th><th>测试方法</th><th>预期结果</th><th>输出</th><th>bug及解决方案</th></tr></thead><tbody><tr><td>增加记住密码功能，使用token验证登录</td><td>记住密码登录，第二次登录使用token登录</td><td>登录成功、正常进入系统</td><td>无法正常收消息</td><td>token登录后未维护服务器中在线用户列表，导致消息全进离线信箱，已解决</td></tr><tr><td>测试注册是否自动验证所输信息合法性</td><td>分别使用弱密码、非法邮箱注册</td><td>无法注册</td><td>弱密码无法注册，非法邮箱正常注册，导致无法正常使用找回密码功能</td><td>使用正则表达式验证邮箱合法性，确保用户可以使用邮箱正常找回密码</td></tr><tr><td>测试能否正常找回密码</td><td>注册新账号，使用找回密码功能</td><td>该账号邮箱收到含有账号密码的邮件</td><td>收到了sha256加密的密码，相当于还是没找回</td><td>数据库使用sha256加密存储密码导致，改用rsa加密存储密码，已解决</td></tr><tr><td>登录后拉取离线消息、群组列表和好友列表</td><td>登录一个存在离线消息、多个好友和多个群聊的账号</td><td>正常拉取消息、好友列表和群聊列表</td><td>服务器报错，无法完成登录</td><td>TCP粘连，服务器接收线程无法正常解析请求，写函数将每个JSON协议请求分离放入队列，按顺序处理请求，已解决</td></tr><tr><td>由本表4号用例可知客户端也存在潜在的TCP粘连问题</td><td></td><td></td><td></td><td>使用和服务器相同的解决办法，已解决</td></tr><tr><td>测试服务端TCP粘连问题是否解决</td><td>多个不同主机，每个主机开多个客户端，每次登录拉取离线消息、群组和聊天列表</td><td>服务器正常处理请求，不报错</td><td>一台主机无法登录第二个账号</td><td>服务器使用了单一队列导致不同线程中处理请求混乱，区分不同线程队列，已解决</td></tr><tr><td>测试TCP保活机制</td><td>分别测试客户端与服务端正常通讯情况下，服务端与客户端长期不进行请求操作，以及服务端和客户端分别各自主动异常掉线后对方是否有提示</td><td>长时间未操作双方通讯保持，各自断网后对方有掉线提醒</td><td>客户端无掉线提醒</td><td>增加类似心跳包功能，一旦客户端通讯失败后弹出异常掉线提醒，已解决</td></tr><tr><td>测试服务器与数据库正常交互</td><td>使用注册功能注册新账号</td><td>新账号注册成功、写入数据库</td><td>服务器报错，无法正常写入数据库</td><td>数据库连接不能以参数形式传入thread，已解决</td></tr><tr><td>测试创建群聊</td><td>使用同一账号多次创建群聊，多个账号多次创建群聊</td><td>根据所需正常更新数据库</td><td>同一账号只能创建一个群聊</td><td>数据库群组表中群主属性被设成”UNIQUE”，已解决</td></tr><tr><td>测试创建群聊</td><td>使用同一账号多次创建群聊，多个账号多次创建群聊</td><td>根据所需正常更新数据库</td><td>无法创建、无法更新数据库</td><td>数据库中”group”为关键字，需要加”[]”，已解决</td></tr><tr><td>测试两个用户之间收发消息</td><td>不同主机开客户端，加好友、收发消息</td><td>正常加好友、正常收发消息</td><td>正常加好友和收发消息，但缺乏提醒</td><td>收到消息后更新右侧聊天列表，已解决</td></tr><tr><td>测试收发消息提醒</td><td>不同主机开客户端，加好友、收发消息</td><td>正常加好友、正常收发消息，存在提醒</td><td>正常加好友、正常收发消息，存在提醒，但不醒目</td><td>使用小红点标注新好友请求和新消息，已解决</td></tr><tr><td>加入本地存储聊天记录功能</td><td>不同主机开客户端，加好友、收发消息，查看本地文件内是否存在聊天记录</td><td>正常通信聊天，同时以文件形式保存了聊天记录</td><td>无法收到消息了</td><td>若客户端不存在对应文件目录则导致该错误。加入是否存在目录的判断，如不存在则创建，已解决</td></tr><tr><td></td><td></td><td></td><td>某次测试下，收到好友消息后右侧聊天列表多出了一个与该好友的聊天</td><td>for循环中break缩进错误导致循环只执行一次。改正break缩进，已解决</td></tr><tr><td>测试本地存储聊天记录功能</td><td>不同主机开客户端，加好友、收发消息，查看本地文件内是否存在聊天记录</td><td>正常通信聊天，同时以文件形式保存了聊天记录</td><td>正常保存了聊天记录，但加载时时间顺序反了</td><td>聊天记录本身按时间顺序存储，读取时列表list.reverse()一下就行，已解决</td></tr><tr><td>测试收发消息后聊天框能否正常显示消息</td><td>多个主机、不同客户端间互相收发消息</td><td>聊天消息以时间顺序显示双方的聊天气泡</td><td>某些情况下无法显示好友姓名</td><td>添加新好友后未维护本地好友列表导致本地不知道好友姓名。新增添加好友后更新好友列表，已解决</td></tr><tr><td></td><td></td><td></td><td>某些情况下消息气泡不能加载</td><td>未找到好友头像导致。将头像存储相对路径改为绝对路径，已解决</td></tr><tr><td>新增拉取群聊后广播给所有群成员，并由群主自动发送”群聊已创建”的消息，测试创建群聊是否正常</td><td>不同主机、多个客户端，多次拉取群聊</td><td>正常拉取，所有群成员正常收到</td><td>某些情况下，群主无法收到创建成功的消息，也不自动发送通知</td><td>若拉取群成员时未添加群主自己，则导致此错误。服务器处理时增加判断，确保群主自己收到返回消息，已解决</td></tr><tr><td>测试群聊发送文件功能</td><td>不同主机，多个客户端拉取群聊，发送文件</td><td>所有群成员可接收本群内所有文件</td><td>群无法接收文件</td><td>收消息时不增加群聊时对文件型消息特判导致收文件与接收文本消息混淆，已解决</td></tr><tr><td>测试文件收发功能是否正常</td><td>不同主机客户端加好友后，互相收发文件</td><td>文件能正常收发和打开</td><td>可以正常收发和打开，但不醒目</td><td>添加文件收发的进度条，已解决</td></tr><tr><td>测试文件收发功能是否正常</td><td>不同主机客户端加好友后，互相收发文件</td><td>文件能正常收发和打开</td><td>某些情况下文件不能正常发送</td><td>发文件对应的功能函数结束后相应的子线程被销毁导致无法完成发送文件。在程序public(shared_module)模块中添加实例化的收发文件线程类对象，保证线程不被异常销毁，已解决</td></tr><tr><td>测试群聊发送文件功能</td><td>不同主机，多个客户端拉取群聊，发送文件</td><td>所有群成员可接收本群内所有文件</td><td>群无法接收文件</td><td>收消息时不增加群聊时对文件型消息特判导致收文件与接收文本消息混淆，已解决</td></tr><tr><td>测试上传更新头像功能</td><td>本机上传头像，测试好友是否可以自动接收、更新头像</td><td>头像可以正常发送并更新给所有好友</td><td>好友不能正常接收</td><td>服务器在接收头像时立刻将广播发送给所有好友，所有好友自动下载时服务器未完成接收新头像，导致读取到的头像filesize为0。服务器完成接收后在发送广播，已解决</td></tr><tr><td>测试上传更新头像功能</td><td>本机上传头像，测试好友是否可以自动接收、更新头像</td><td>头像可以正常发送并更新给所有好友</td><td>不能正常上传</td><td>上传了不支持的头像文件类型如webp\gif等导致。新增限制上传头像类型，已解决</td></tr></tbody></table></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;h3 id=&quot;项目概述&quot;&gt;&lt;a href=&quot;#项目概述&quot; class=&quot;headerlink&quot; title=&quot;项目概述&quot;&gt;&lt;/a&gt;项目概述&lt;/h</summary>
+      
+    
+    
+    
+    <category term="python开发" scheme="http://example.com/categories/python%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="软件开发" scheme="http://example.com/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>每月分享</title>
     <link href="http://example.com/2023/03/17/%E6%AF%8F%E6%9C%88%E5%88%86%E4%BA%AB1/"/>
     <id>http://example.com/2023/03/17/%E6%AF%8F%E6%9C%88%E5%88%86%E4%BA%AB1/</id>
@@ -217,52 +432,6 @@
     
     
     <category term="linux" scheme="http://example.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>alipan-CloudDrive挂载</title>
-    <link href="http://example.com/2022/05/27/a-drive%E6%8C%82%E8%BD%BD/"/>
-    <id>http://example.com/2022/05/27/a-drive%E6%8C%82%E8%BD%BD/</id>
-    <published>2022-05-27T14:06:43.000Z</published>
-    <updated>2025-05-26T16:18:07.616Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="针对pc本地存储不够用，把阿里云盘挂载到系统上扩容"><a href="#针对pc本地存储不够用，把阿里云盘挂载到系统上扩容" class="headerlink" title="针对pc本地存储不够用，把阿里云盘挂载到系统上扩容"></a>针对pc本地存储不够用，把阿里云盘挂载到系统上扩容</h1><p>学生优惠：本科四年1个T</p><h1 id="避雷"><a href="#避雷" class="headerlink" title="避雷"></a>避雷</h1><ul><li>目前搜索引擎上看到最多的是cloud drive的不开源软件支持阿里云盘挂载，版本是1.1，但是bug极多，误碰</li></ul><h1 id="挂载步骤"><a href="#挂载步骤" class="headerlink" title="挂载步骤"></a>挂载步骤</h1><ul><li><a href="https://www.bilibili.com/read/cv16275095/">参考链接</a></li></ul><p>重点在github上的项目：<a href="https://github.com/RaiDrive/RaiDrive.Translation">RaiDrive挂载软件</a>，在这里总结一下</p><ol><li><p>下载java，后续的bat里面含java的语句(8和18挑一个版本)</p></li><li><p>修改webdav.bat源文件里的内容：<strong>该文件在哪个盘</strong>  <strong>cd到该文件的地址</strong> <strong>端口</strong> <strong>阿里云盘网页端的token</strong></p></li><li><p>运行该文件并打开 <a href="http://127.0.0.1">http://127.0.0.1</a>: 端口（账号密码都是admin）</p></li><li><p>设置该bat文件的开机自启</p></li><li><p>安装RaiDrivre并添加你的云盘</p><h1 id="所需文件"><a href="#所需文件" class="headerlink" title="所需文件"></a>所需文件</h1><p>阿里云盘：<a href="https://www.aliyundrive.com/s/j3KuEEoYB1u">https://www.aliyundrive.com/s/j3KuEEoYB1u</a></p><p>提取码：t6i3</p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;针对pc本地存储不够用，把阿里云盘挂载到系统上扩容&quot;&gt;&lt;a href=&quot;#针对pc本地存储不够用，把阿里云盘挂载到系统上扩容&quot; class=&quot;headerlink&quot; title=&quot;针对pc本地存储不够用，把阿里云盘挂载到系统上扩容&quot;&gt;&lt;/a&gt;针对pc本地存储不够用</summary>
-      
-    
-    
-    
-    <category term="其它" scheme="http://example.com/categories/%E5%85%B6%E5%AE%83/"/>
-    
-    
-    <category term="CloudDrive" scheme="http://example.com/tags/CloudDrive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我出生辣</title>
-    <link href="http://example.com/2022/05/17/hello-world/"/>
-    <id>http://example.com/2022/05/17/hello-world/</id>
-    <published>2022-05-17T15:18:49.000Z</published>
-    <updated>2025-05-26T17:48:29.354Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="建站参考"><a href="#建站参考" class="headerlink" title="建站参考"></a>建站参考</h2><p>Check <a href="https://hexo.io/docs/">hexo的文档</a> .<br>Check <a href="https://butterfly.js.org/">butterfly的主题文档</a>.</p><h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>对于数学公式的支持，参考<a href="https://butterfly.js.org/posts/4aa8abbe/?highlight=%E5%85%AC%E5%BC%8F">butterfly对应部分</a>，其中Katex存在<a href="https://www.zhihu.com/question/267011398">前台重复显示公式的问题</a>，但是查了半天没有找出重复渲染问题所在，因此改用MathJax。</p><p>但是，hexo的mark down渲染引擎还是有一些bug，导致MathJax在mark down中渲染公式会出错，可以参考这个<a href="https://runninggump.github.io/2018/12/05/%E6%88%90%E5%8A%9F%E8%A7%A3%E5%86%B3%E5%9C%A8hexo%E4%B8%AD%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E9%97%AE%E9%A2%98/">博客</a>、<a href="https://www.jianshu.com/p/7ab21c7f0674">和这个</a>。</p><p>具体而言，Hexo默认使用”hexo-renderer-marked”引擎渲染网页，该引擎会把一些特殊的markdown符号转换为相应的html标签，比如在markdown语法中，下划线’_’代表斜体，会被渲染引擎处理为&lt; em&gt;标签。</p><p>因为类Latex格式书写的数学公式下划线 ‘_’ 表示下标，有特殊的含义，如果被强制转换为&lt; em&gt;标签，那么MathJax引擎在渲染数学公式的时候就会出错。例如，$x_i$在开始被渲染的时候，处理为$x<em>i</em>$，这样MathJax引擎就认为该公式有语法错误，因为不会渲染。</p><p>类似的语义冲突的符号还包括’*’, ‘{‘, ‘}’, ‘\’等。</p><p>就是 markdown html latex，这几种标记语言格式的渲染问题。</p><p>步骤1、换新md渲染引擎（bug少）</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure><p>步骤2、手动改hexo-renderer-kramed引擎的语义冲突的问题。</p><p>来到博客根目录下，找到node_modules\kramed\lib\rules\inline.js，把第11行的escape变量的值做相应的修改：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">  escape: /^\\([`*\[\]()#$+\-.!_&gt;])/</span><br></pre></td></tr></table></figure></p><p>这一步是在原基础上取消了对\,{,}的转义(escape)。同时把第20行的em变量也要做相应的修改。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br><span class="line">  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span><br></pre></td></tr></table></figure><h2 id="图片排版"><a href="#图片排版" class="headerlink" title="图片排版"></a>图片排版</h2><p>md控制图片排版过于简单，用html<br><a href="https://www.jianshu.com/p/cc5a35435c05">https://www.jianshu.com/p/cc5a35435c05</a><br><a href="https://blog.csdn.net/qq_21808961/article/details/80666589">https://blog.csdn.net/qq_21808961/article/details/80666589</a><br><a href="https://sobaigu.com/images-side-by-side-in-markdown.html">https://sobaigu.com/images-side-by-side-in-markdown.html</a></p><hr><blockquote><p>update 25.5.16</p></blockquote><h2 id="部分模块下线和问题"><a href="#部分模块下线和问题" class="headerlink" title="部分模块下线和问题"></a>部分模块下线和问题</h2><p>现在部署在vercel上的waline评论系统下线了，域名也下线了，有GitHub的托管网址可以用。<br>另外发现Github Pages个人博客使用Github Action<a href="https://blog.csdn.net/weixin_44165186/article/details/148174379">部署失败</a>，Github Action官方从2024年12月5日开始，到2025年1月17日对ubuntu-latest默认系统做了调整，之前是ubuntu-22.04，现在改成了ubuntu-24.04，因此之前的yml文件里面还是写的runs-on: ubuntu-latest会出现系统性的报错。把github\workflows路径下的XX.yml文件里面的runs-on: ubuntu-latest修改成runs-on: ubuntu-22.04，不过需要注意的是，这个方法算是临时方法，只能管两年。</p><h2 id="git存档"><a href="#git存档" class="headerlink" title="git存档"></a>git存档</h2><p>hexo-butterfly魔改的主题有git记录，但是butterfly父git和blog的git有冲突，合并起来会出问题，因此不要fetch butterfly在github上的最新版，用旧版的hexo+butterfly+node.js就好了，但是这样版本很旧，容易出问题，因此还是打包一版work的（git+hexo+butterfly+node.js）在tg。<br>另外.git在butterfly下面，可以跟踪不到hexo根目录的_config.yml和npm包中md渲染引擎的改动，将来重建博客可能比较费劲，好在贵在内容，渲染格式主题是小事。说不定过几天哪个系统又下线了，blog又寄了。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;建站参考&quot;&gt;&lt;a href=&quot;#建站参考&quot; class=&quot;headerlink&quot; title=&quot;建站参考&quot;&gt;&lt;/a&gt;建站参考&lt;/h2&gt;&lt;p&gt;Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;hexo的文档&lt;/a&gt; .&lt;br&gt;Check &lt;</summary>
-      
-    
-    
-    
-    <category term="其它" scheme="http://example.com/categories/%E5%85%B6%E5%AE%83/"/>
-    
     
   </entry>
   
